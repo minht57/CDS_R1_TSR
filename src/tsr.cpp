@@ -185,7 +185,7 @@ int main(int argc, char** argv)
 	}
 
 	    //Init();
-
+	double ttime = 0;
 	while (1) {
 
 		double t = (double)getTickCount();
@@ -200,6 +200,21 @@ int main(int argc, char** argv)
 		}
 		if (img_raw.empty())
 		{
+			t = ((double)getTickCount() - t)/getTickFrequency();
+			ttime += t;
+			cout << fixed;
+			cout << endl <<	"*********************************************************" <<	endl;
+			cout << "*	***************Video  Info***************	*"  <<	endl;
+			cout << "*	* Video time:		" << setprecision(2) << vid.get(CAP_PROP_FRAME_COUNT)/vid.get(CAP_PROP_FPS) << " s		*	*" << endl;
+			cout << "*	* Number of frame:	" << (int)vid.get(CAP_PROP_FRAME_COUNT) << "		*	*" <<endl;
+			cout << "*	* Frame size:		" << (int)vid.get(CV_CAP_PROP_FRAME_WIDTH) <<" x " << (int)vid.get(CAP_PROP_FRAME_HEIGHT) << "	*	*" <<endl;
+			cout << "*	* FPS:			" << vid.get(CAP_PROP_FPS) << "		*	*" <<endl;
+			cout << "*	**********Processing Info****************	*"  <<	endl;
+			cout << "*	* Total time:		" <<setprecision(2) << ttime << " s" << "		*	*" <<endl;
+			cout << "*	* Total frame:		" << cnt+1 << "		*	*" <<endl;
+			cout << "*	* Frame size:		" << (int)vid.get(CV_CAP_PROP_FRAME_WIDTH) <<" x " << (int)vid.get(CAP_PROP_FRAME_HEIGHT) << "	*	*" <<endl;
+			cout << "*	* FPS:			" << setprecision(2) << (double)cnt/ttime << "		*	*" <<endl;
+			cout <<	"*********************************************************" <<	endl <<	endl;
 			cout << "Video end" << endl;
 			break;
 		}
@@ -215,9 +230,6 @@ int main(int argc, char** argv)
 		inRange(img_HSV, Scalar(R2_H_val, R2_S_val, R2_V_val), Scalar(R2_H_max, R2_S_max, R2_V_max), maskr2);
 		edged = maskr1 + maskr2 + maskb;
 
-		// dilate(maskr, edged, Mat(), Point(-1, -1), 2, 1, 1);
-		// erode(edged, edged, Mat(), Point(-1, -1), 2, 1, 1);
-
 		Mat kernel = (Mat_<float>(3,3) <<
 			1,  1, 1,
 			1, -8, 1,
@@ -229,33 +241,34 @@ int main(int argc, char** argv)
         edged.convertTo(sharp, CV_32F);
         Mat imgResult = sharp - imgLaplacian;
 
-        // convert back to 8bits gray scale
         imgResult.convertTo(imgResult, CV_8UC3);
         imgLaplacian.convertTo(imgLaplacian, CV_8UC3);
+
+        // Mat kernel1 = Mat::ones(3, 3, CV_8UC1);
+        // dilate(imgLaplacian, imgLaplacian, kernel1);
 
         std::vector<std::vector<cv::Point> > contours;
         std::vector<Vec4i> hierarchy;
 
-        // imshow("imgLaplacian", imgLaplacian);
+    imshow("imgLaplacian", edged);
 
         findContours(imgLaplacian, contours, hierarchy, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
 
         std::vector<Rect> boundRect( contours.size() );
         Mat drawing = Mat::zeros(imgLaplacian.size(), CV_8UC1);
 
-        // cout << "contours: " << contours.size()<< endl;
-
         for(int idx = 0; idx < contours.size(); idx++)
         {
+        	// drawContours( img_result, contours, idx, Scalar(255,0,0), 1 );
 
         	boundRect[idx] = boundingRect( Mat(contours[idx]) );
-        	
+
         	if ((boundRect[idx].width*boundRect[idx].height > 900) && (boundRect[idx].width*boundRect[idx].height < 50000))
         	{
         		if ( ( (float)boundRect[idx].width/boundRect[idx].height > 0.5) && ( (float)boundRect[idx].width/boundRect[idx].height < 1.3 ) )
         		{
         			drawContours( drawing, contours, idx, 255, CV_FILLED, 8, hierarchy );
-        			imshow("drawing" + to_string(idx), drawing);
+        			// imshow("drawing" + to_string(idx), drawing);
 #ifdef 	OFFSET_BOUNDRECT
 
         			int tl_x = boundRect[idx].tl().x;
@@ -299,7 +312,6 @@ int main(int argc, char** argv)
 
         			Mat kernel1 = Mat::ones(3, 3, CV_8UC1);
         			dilate(dist, dist, kernel1);
-			// imshow("Peaks"+ to_string(idx), dist);
 
         			Mat dist_8u;
         			dist.convertTo(dist_8u, CV_8U);
@@ -317,17 +329,19 @@ int main(int argc, char** argv)
         			circle(markers, Point(5,5), 3, CV_RGB(255,255,255), -1);
 		    // imshow("Markers", markers*10000);
 
-        			t = ((double)getTickCount() - t)/getTickFrequency();
-        			cout << "1: " << t << endl;
-        			t = (double)getTickCount();
+        			// t = ((double)getTickCount() - t)/getTickFrequency();
+        			// ttime += t;
+        			// cout << "1: " << t << endl;
+        			// t = (double)getTickCount();
 
 
         			watershed(roi_s, markers);
 
 
-        			t = ((double)getTickCount() - t)/getTickFrequency();
-        			cout << "3: " << t << endl;
-        			t = (double)getTickCount();
+        			// t = ((double)getTickCount() - t)/getTickFrequency();
+        			// ttime += t;
+        			// cout << "3: " << t << endl;
+        			// t = (double)getTickCount();
 
         			Mat dst = Mat::zeros(markers.size(), CV_8UC1);
 
@@ -336,11 +350,17 @@ int main(int argc, char** argv)
         				for (int j = 0; j < markers.cols; j++)
         				{
         					int index = markers.at<int>(i,j);
-        					if(index==-1)
+        					if(index==1)
         						dst.at<uchar>(i,j) = 255;
+        					else dst.at<uchar>(i,j) = 0;
         				}
         			}
-   			// imshow("Dst" + to_string(idx), dst);
+
+        			// bitwise_not(dst,dst);
+        			dst = dst & roi_d;
+
+      //   	namedWindow( "Dst", WINDOW_NORMAL );
+   			// imshow("Dst", dst);
         			
         			std::vector<std::vector<cv::Point> > contoursw;
         			std::vector<Vec4i> hierarchyw;
@@ -360,6 +380,7 @@ int main(int argc, char** argv)
         						{        							
         							if ( ( (float)boundRectw[iw].width/boundRectw[iw].height < 1.3) && ( (float)boundRectw[iw].width/boundRectw[iw].height > 0.5) )
         							{
+        								// drawContours(img_result, contoursw, iw, Scalar(255,0,0), 1);
 #ifdef OFFSET_BOUNDRECT
         								Rect rectbound (tl_x + boundRectw[iw].tl().x, tl_y + boundRectw[iw].tl().y,boundRectw[iw].width, boundRectw[iw].height);
         								cv::rectangle( img_result, rectbound, Scalar(0,255,0), 2, 8, 0 );
@@ -367,7 +388,7 @@ int main(int argc, char** argv)
         								Rect rectbound (boundRectw[iw].tl().x + boundRect[idx].tl().x - 2, boundRectw[iw].tl().y + boundRect[idx].tl().y - 2,boundRectw[iw].width, boundRectw[iw].height);
         								cv::rectangle( img_result, rectbound, Scalar(0,255,0), 2, 8, 0 );       						
 #endif
-        								cout << idx << endl;
+        								// cout << idx << endl;
         							}
         						}
         					}
@@ -385,6 +406,8 @@ int main(int argc, char** argv)
         {
         	if(waitKey(1) == 27)
         		break;
+        	t = ((double)getTickCount() - t)/getTickFrequency();
+        	ttime += t;
         }
         if(parser.option("i"))
         {
@@ -392,8 +415,8 @@ int main(int argc, char** argv)
         		break;
         }
 
-        t = ((double)getTickCount() - t)/getTickFrequency();
-        cout << "2: " << t << endl;
+        // t = ((double)getTickCount() - t)/getTickFrequency();
+        // cout << "2: " << t << endl;
 
     }
 
