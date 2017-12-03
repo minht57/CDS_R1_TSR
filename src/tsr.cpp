@@ -118,9 +118,9 @@ int main(int argc, char** argv)
 
 	parser.parse(argc, argv);
 
-	fstream resfile;
-	resfile.open ("result/result.txt");
-	resfile << "0" << endl << endl;
+	// fstream resfile;
+	// resfile.open ("result/result.txt");
+	// resfile << "0" << endl << endl;
 
 	int cnt = 0;
 	int idx_detect = 0;
@@ -165,15 +165,15 @@ int main(int argc, char** argv)
 
 	signs.push_back(TrafficSign("oneway-exit", "resources/detectors/oneway-exit-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
 
-    signs.push_back(TrafficSign("crossing", "resources/detectors/crossing-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
+	signs.push_back(TrafficSign("crossing", "resources/detectors/crossing-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
 
-    signs.push_back(TrafficSign("give-way", "resources/detectors/give-way-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
+	signs.push_back(TrafficSign("give-way", "resources/detectors/give-way-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
 
-    signs.push_back(TrafficSign("main", "resources/detectors/main-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
+	signs.push_back(TrafficSign("main", "resources/detectors/main-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
 
-    signs.push_back(TrafficSign("parking", "resources/detectors/parking-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
+	signs.push_back(TrafficSign("parking", "resources/detectors/parking-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
 
-    signs.push_back(TrafficSign("stop", "resources/detectors/stop-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
+	signs.push_back(TrafficSign("stop", "resources/detectors/stop-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
 
 	typedef scan_fhog_pyramid<pyramid_down<6> > image_scanner_type;
 	std::vector<object_detector<image_scanner_type> > detectors;
@@ -241,7 +241,8 @@ int main(int argc, char** argv)
         findContours(imgLaplacian, contours, hierarchy, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
 
         std::vector<Rect> boundRect( contours.size() );
-        Mat drawing = Mat::zeros(edged.size(), CV_8UC1);
+        Mat drawing = Mat::zeros(imgLaplacian.size(), CV_8UC1);
+
 
         for(int idx = 0; idx < contours.size(); idx++)
         {
@@ -252,67 +253,214 @@ int main(int argc, char** argv)
         	{
         		boundRect[idx] = boundingRect( Mat(contours[idx]) );
         		if ((((float)boundRect[idx].width/boundRect[idx].height) > 0.5) &&(((float)boundRect[idx].width/boundRect[idx].height) < 1.3))
+        		{
+
         			drawContours( drawing, contours, idx, 255, CV_FILLED, 8, hierarchy );
+
+
+					// Mat addc = Mat::zeros(boundRect[idx].height, 1, CV_8UC3);
+					// Mat addr = Mat::zeros(1, boundRect[idx].height + 2, CV_8UC3);
+
+     //    			// Rect roi(, boundRect[i].tl().y - 1, 
+		   //       //                boundRect[i].br().x - boundRect[i].tl().x, boundRect[i].br().y - boundRect[i].tl().y);
+
+
+     //    			cv::hconcat(addc, crp_drw, crp_drw);
+     //    			cv::hconcat(crp_drw, addc, crp_drw);
+
+     //    			Mat roi_d = Mat::zeros(1, boundRect[idx].height + 2, CV_8UC3);
+     //    			roi_d.push_back(crp_drw);
+     //    			roi_d.push_back(addr);
+
+     //    			cv::hconcat(addc, src, src);
+     //    			cv::hconcat(src, addc, src);
+
+     //    			Mat roi_s = Mat::zeros(1, boundRect[idx].height + 2, CV_8UC3);
+     //    			roi_s.push_back(src);
+     //    			roi_s.push_back(addr);
+        			int tl_x = boundRect[idx].tl().x;
+        			int tl_y = boundRect[idx].tl().y;
+
+        			int br_x = boundRect[idx].br().x;
+        			int br_y = boundRect[idx].br().y;
+
+        			int offset = 2;
+        			if(tl_x > offset-1) tl_x = tl_x - offset;
+
+        			if(tl_y > offset-1) tl_y = tl_y - offset;
+
+        			if(br_x + offset-1< img_result.cols) br_x = br_x + offset;
+
+        			if(br_y + offset-1< img_result.rows) br_y = br_y + offset;
+
+        			Rect roi(tl_x, tl_y, br_x - tl_x, br_y - tl_y);
+
+        			Mat crp_drw = drawing(roi).clone();
+        			Mat src = img_raw(roi).clone();
+
+        			namedWindow( "Drawing", WINDOW_NORMAL );
+        			imshow("Drawing" ,crp_drw);
+
+        			Mat dist;
+        			distanceTransform(crp_drw, dist, CV_DIST_L2, 3);
+        			normalize(dist, dist, 0, 1., NORM_MINMAX);
+        			threshold(dist, dist, .4, 1., CV_THRESH_BINARY);
+
+        			Mat kernel1 = Mat::ones(3, 3, CV_8UC1);
+        			dilate(dist, dist, kernel1);
+		    // imshow("Peaks", dist);
+
+        			Mat dist_8u;
+        			dist.convertTo(dist_8u, CV_8U);
+
+        			std::vector<std::vector<cv::Point> > contoursm;
+        			std::vector<Vec4i> hierarchym;
+
+        			findContours(dist_8u, contoursm, hierarchym, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
+
+        			Mat markers = Mat::zeros(dist.size(), CV_32SC1);
+        			for(int isx = 0; isx < contoursm.size(); isx++) {
+        				drawContours(markers, contoursm, static_cast<int>(isx), Scalar::all(static_cast<int>(isx)+1), -1);	
+        			}
+
+        			circle(markers, Point(5,5), 3, CV_RGB(255,255,255), -1);
+		    // imshow("Markers", markers*10000);
+
+        			t = ((double)getTickCount() - t)/getTickFrequency();
+        			cout << "1: " << t << endl;
+        			t = (double)getTickCount();
+
+
+        			watershed(src, markers);
+
+
+        			t = ((double)getTickCount() - t)/getTickFrequency();
+        			cout << "3: " << t << endl;
+        			t = (double)getTickCount();
+
+        			Mat dst = Mat::zeros(markers.size(), CV_8UC1);
+
+        			for (int i = 0; i < markers.rows; i++)
+        			{
+        				for (int j = 0; j < markers.cols; j++)
+        				{
+        					int index = markers.at<int>(i,j);
+        					if(index==-1)
+        						dst.at<uchar>(i,j) = 255;
+        				}
+        			}
+        			// imshow("Dst" + to_string(idx), dst);
+
+        			std::vector<std::vector<cv::Point> > contoursw;
+        			std::vector<Vec4i> hierarchyw;
+
+        			findContours(dst, contoursw, hierarchyw, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE);
+
+        			std::vector<Rect> boundRectw( contoursw.size() );
+
+        			if(contoursw.size() > 0)
+        			{
+        				for(int iw = 0; iw < contoursw.size(); iw++) {
+        					boundRectw[iw] = boundingRect( Mat(contoursw[iw]) );
+        					if ((boundRectw[iw].width*boundRectw[iw].height < 10000) && (boundRectw[iw].width*boundRectw[iw].height > 900) && (hierarchyw[iw][2]< 0))
+        					{
+        						Rect rectbound (tl_x + boundRectw[iw].tl().x, tl_y + boundRectw[iw].tl().y,boundRectw[iw].width, boundRectw[iw].height);
+        						cv::rectangle( img_raw, rectbound, Scalar(0,0,255), 2, 8, 0 );
+        					}
+        				}
+        			}
+        		}
+
         	}
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // imshow("Drawing", drawing);
 
-        Mat dist;
-        distanceTransform(drawing, dist, CV_DIST_L2, 3);
-        normalize(dist, dist, 0, 1., NORM_MINMAX);
-        threshold(dist, dist, .4, 1., CV_THRESH_BINARY);
+   //      Mat dist;
+   //      distanceTransform(drawing, dist, CV_DIST_L2, 3);
+   //      normalize(dist, dist, 0, 1., NORM_MINMAX);
+   //      threshold(dist, dist, .4, 1., CV_THRESH_BINARY);
 
-	    Mat kernel1 = Mat::ones(3, 3, CV_8UC1);
-	    dilate(dist, dist, kernel1);
-	    // imshow("Peaks", dist);
+	  //   Mat kernel1 = Mat::ones(3, 3, CV_8UC1);
+	  //   dilate(dist, dist, kernel1);
+	  //   // imshow("Peaks", dist);
 
-	    Mat dist_8u;
-	    dist.convertTo(dist_8u, CV_8U);
+	  //   Mat dist_8u;
+	  //   dist.convertTo(dist_8u, CV_8U);
 
-        std::vector<std::vector<cv::Point> > contoursm;
-        std::vector<Vec4i> hierarchym;
+   //      std::vector<std::vector<cv::Point> > contoursm;
+   //      std::vector<Vec4i> hierarchym;
 
-        findContours(dist_8u, contoursm, hierarchym, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
+   //      findContours(dist_8u, contoursm, hierarchym, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
 
-        Mat markers = Mat::zeros(dist.size(), CV_32SC1);
-        for(int isx = 0; isx < contoursm.size(); isx++) {
-			drawContours(markers, contoursm, static_cast<int>(isx), Scalar::all(static_cast<int>(isx)+1), -1);	
-        }
+   //      Mat markers = Mat::zeros(dist.size(), CV_32SC1);
+   //      for(int isx = 0; isx < contoursm.size(); isx++) {
+			// drawContours(markers, contoursm, static_cast<int>(isx), Scalar::all(static_cast<int>(isx)+1), -1);	
+   //      }
 
-        circle(markers, Point(5,5), 3, CV_RGB(255,255,255), -1);
-	    // imshow("Markers", markers*10000);
+   //      circle(markers, Point(5,5), 3, CV_RGB(255,255,255), -1);
+	  //   // imshow("Markers", markers*10000);
 
-	    watershed(img_raw, markers);
+   //      t = ((double)getTickCount() - t)/getTickFrequency();
+   //      cout << "1: " << t << endl;
+   //      t = (double)getTickCount();
 
-	    Mat dst = Mat::zeros(markers.size(), CV_8UC1);
+   //      Mat grrrr;
+   //      Mat src;
 
-	    for (int i = 0; i < markers.rows; i++)
-	    {
-	        for (int j = 0; j < markers.cols; j++)
-	        {
-	            int index = markers.at<int>(i,j);
-	            if(index==-1)
-	            	dst.at<uchar>(i,j) = 255;
-	        }
-	    }
-	    // imshow("Dst", dst);
-        std::vector<std::vector<cv::Point> > contoursw;
-        std::vector<Vec4i> hierarchyw;
+   //      cvtColor(img_result, grrrr, COLOR_BGR2GRAY);
+   //      cvtColor(markers, src, COLOR_GRAY2BGR);
 
-        findContours(dst, contoursw, hierarchyw, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE);
+	  //   watershed(src, markers);
 
-        std::vector<Rect> boundRectw( contoursw.size() );
 
-        if(contoursw.size() > 0)
-        {
-        	for(int iw = 0; iw < contoursw.size(); iw++) {
-        		boundRectw[iw] = boundingRect( Mat(contoursw[iw]) );
-        		if ((boundRectw[iw].width*boundRectw[iw].height < 10000) && (boundRectw[iw].width*boundRectw[iw].height > 900) && (hierarchyw[iw][2]< 0))
-        		{
-        			cv::rectangle( img_raw, boundRectw[iw].tl(),boundRectw[iw].br(), Scalar(0,0,255), 2, 8, 0 );
-        		}
-        	}
-        }
+	  //   t = ((double)getTickCount() - t)/getTickFrequency();
+	  //   cout << "3: " << t << endl;
+	  //   t = (double)getTickCount();
+
+	  //   Mat dst = Mat::zeros(markers.size(), CV_8UC1);
+
+	  //   for (int i = 0; i < markers.rows; i++)
+	  //   {
+	  //       for (int j = 0; j < markers.cols; j++)
+	  //       {
+	  //           int index = markers.at<int>(i,j);
+	  //           if(index==-1)
+	  //           	dst.at<uchar>(i,j) = 255;
+	  //       }
+	  //   }
+	  //   // imshow("Dst", dst);
+   //      std::vector<std::vector<cv::Point> > contoursw;
+   //      std::vector<Vec4i> hierarchyw;
+
+   //      findContours(dst, contoursw, hierarchyw, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE);
+
+   //      std::vector<Rect> boundRectw( contoursw.size() );
+
+   //      if(contoursw.size() > 0)
+   //      {
+   //      	for(int iw = 0; iw < contoursw.size(); iw++) {
+   //      		boundRectw[iw] = boundingRect( Mat(contoursw[iw]) );
+   //      		if ((boundRectw[iw].width*boundRectw[iw].height < 10000) && (boundRectw[iw].width*boundRectw[iw].height > 900) && (hierarchyw[iw][2]< 0))
+   //      		{
+   //      			cv::rectangle( img_raw, boundRectw[iw].tl(),boundRectw[iw].br(), Scalar(0,0,255), 2, 8, 0 );
+   //      		}
+   //      	}
+   //      }
 
         namedWindow( nameWindow6 , WINDOW_NORMAL );
         imshow(nameWindow6,img_raw);
@@ -328,14 +476,14 @@ int main(int argc, char** argv)
         }
 
         t = ((double)getTickCount() - t)/getTickFrequency();
-        cout << t << endl;
+        cout << "2: " << t << endl;
 
     }
 
-    resfile.close();
-    resfile.open ("result/result.txt");
-    resfile << idx_detect << endl;
-    resfile.close();
+    // resfile.close();
+    // resfile.open ("result/result.txt");
+    // resfile << idx_detect << endl;
+    // resfile.close();
 
-    return 1;
+return 1;
 }
