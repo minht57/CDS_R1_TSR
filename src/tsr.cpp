@@ -243,41 +243,21 @@ int main(int argc, char** argv)
         std::vector<Rect> boundRect( contours.size() );
         Mat drawing = Mat::zeros(imgLaplacian.size(), CV_8UC1);
 
+        // cout << "contours: " << contours.size()<< endl;
 
         for(int idx = 0; idx < contours.size(); idx++)
         {
-        // drawContours( img_result, contours, idx, Scalar(255,0,0), CV_FILLED, 8, hierarchy );
-        	int area = contourArea(contours.at(idx));
 
-        	if (area > 900)
+        	boundRect[idx] = boundingRect( Mat(contours[idx]) );
+        	
+        	if ((boundRect[idx].width*boundRect[idx].height > 900) && (boundRect[idx].width*boundRect[idx].height < 50000))
         	{
-        		boundRect[idx] = boundingRect( Mat(contours[idx]) );
-        		if ((((float)boundRect[idx].width/boundRect[idx].height) > 0.5) &&(((float)boundRect[idx].width/boundRect[idx].height) < 1.3))
+        		if ( ( (float)boundRect[idx].width/boundRect[idx].height > 0.5) && ( (float)boundRect[idx].width/boundRect[idx].height < 1.3 ) )
         		{
-
         			drawContours( drawing, contours, idx, 255, CV_FILLED, 8, hierarchy );
+        			imshow("drawing" + to_string(idx), drawing);
+#ifdef 	OFFSET_BOUNDRECT
 
-
-					// Mat addc = Mat::zeros(boundRect[idx].height, 1, CV_8UC3);
-					// Mat addr = Mat::zeros(1, boundRect[idx].height + 2, CV_8UC3);
-
-     //    			// Rect roi(, boundRect[i].tl().y - 1, 
-		   //       //                boundRect[i].br().x - boundRect[i].tl().x, boundRect[i].br().y - boundRect[i].tl().y);
-
-
-     //    			cv::hconcat(addc, crp_drw, crp_drw);
-     //    			cv::hconcat(crp_drw, addc, crp_drw);
-
-     //    			Mat roi_d = Mat::zeros(1, boundRect[idx].height + 2, CV_8UC3);
-     //    			roi_d.push_back(crp_drw);
-     //    			roi_d.push_back(addr);
-
-     //    			cv::hconcat(addc, src, src);
-     //    			cv::hconcat(src, addc, src);
-
-     //    			Mat roi_s = Mat::zeros(1, boundRect[idx].height + 2, CV_8UC3);
-     //    			roi_s.push_back(src);
-     //    			roi_s.push_back(addr);
         			int tl_x = boundRect[idx].tl().x;
         			int tl_y = boundRect[idx].tl().y;
 
@@ -295,20 +275,31 @@ int main(int argc, char** argv)
 
         			Rect roi(tl_x, tl_y, br_x - tl_x, br_y - tl_y);
 
-        			Mat crp_drw = drawing(roi).clone();
-        			Mat src = img_raw(roi).clone();
+        			Mat roi_d = drawing(roi).clone();
+        			Mat roi_s = img_raw(roi).clone();
 
-        			namedWindow( "Drawing", WINDOW_NORMAL );
-        			imshow("Drawing" ,crp_drw);
+#else
+        			Mat crp_drw = drawing(boundRect[idx]).clone();
+        			Mat src = img_raw(boundRect[idx]).clone();
+
+        			int linewidth = 2;
+					Scalar value;
+        			value = Scalar(0, 0, 0);
+        			Mat roi_d;
+        			copyMakeBorder( crp_drw, roi_d, linewidth, linewidth, linewidth, linewidth, BORDER_CONSTANT, value );
+        			Mat roi_s;
+        			copyMakeBorder( src, roi_s, linewidth, linewidth, linewidth, linewidth, BORDER_CONSTANT, value );
+
+#endif
 
         			Mat dist;
-        			distanceTransform(crp_drw, dist, CV_DIST_L2, 3);
+        			distanceTransform(roi_d, dist, CV_DIST_L2, 3);
         			normalize(dist, dist, 0, 1., NORM_MINMAX);
         			threshold(dist, dist, .4, 1., CV_THRESH_BINARY);
 
         			Mat kernel1 = Mat::ones(3, 3, CV_8UC1);
         			dilate(dist, dist, kernel1);
-		    // imshow("Peaks", dist);
+			// imshow("Peaks"+ to_string(idx), dist);
 
         			Mat dist_8u;
         			dist.convertTo(dist_8u, CV_8U);
@@ -331,7 +322,7 @@ int main(int argc, char** argv)
         			t = (double)getTickCount();
 
 
-        			watershed(src, markers);
+        			watershed(roi_s, markers);
 
 
         			t = ((double)getTickCount() - t)/getTickFrequency();
@@ -349,8 +340,8 @@ int main(int argc, char** argv)
         						dst.at<uchar>(i,j) = 255;
         				}
         			}
-        			// imshow("Dst" + to_string(idx), dst);
-
+   			// imshow("Dst" + to_string(idx), dst);
+        			
         			std::vector<std::vector<cv::Point> > contoursw;
         			std::vector<Vec4i> hierarchyw;
 
@@ -361,12 +352,26 @@ int main(int argc, char** argv)
         			if(contoursw.size() > 0)
         			{
         				for(int iw = 0; iw < contoursw.size(); iw++) {
-        					boundRectw[iw] = boundingRect( Mat(contoursw[iw]) );
-        					if ((boundRectw[iw].width*boundRectw[iw].height < 10000) && (boundRectw[iw].width*boundRectw[iw].height > 900) && (hierarchyw[iw][2]< 0))
-        					{
-        						Rect rectbound (tl_x + boundRectw[iw].tl().x, tl_y + boundRectw[iw].tl().y,boundRectw[iw].width, boundRectw[iw].height);
-        						cv::rectangle( img_raw, rectbound, Scalar(0,0,255), 2, 8, 0 );
+
+        					if (hierarchyw[iw][2]< 0)
+        					{        						
+        						boundRectw[iw] = boundingRect( Mat(contoursw[iw]) );
+        						if ( ( (boundRectw[iw].width*boundRectw[iw].height) > 900) && ( (boundRectw[iw].width*boundRectw[iw].height)  < 50000) )
+        						{        							
+        							if ( ( (float)boundRectw[iw].width/boundRectw[iw].height < 1.3) && ( (float)boundRectw[iw].width/boundRectw[iw].height > 0.5) )
+        							{
+#ifdef OFFSET_BOUNDRECT
+        								Rect rectbound (tl_x + boundRectw[iw].tl().x, tl_y + boundRectw[iw].tl().y,boundRectw[iw].width, boundRectw[iw].height);
+        								cv::rectangle( img_result, rectbound, Scalar(0,255,0), 2, 8, 0 );
+#else
+        								Rect rectbound (boundRectw[iw].tl().x + boundRect[idx].tl().x - 2, boundRectw[iw].tl().y + boundRect[idx].tl().y - 2,boundRectw[iw].width, boundRectw[iw].height);
+        								cv::rectangle( img_result, rectbound, Scalar(0,255,0), 2, 8, 0 );       						
+#endif
+        								cout << idx << endl;
+        							}
+        						}
         					}
+
         				}
         			}
         		}
@@ -374,96 +379,8 @@ int main(int argc, char** argv)
         	}
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // imshow("Drawing", drawing);
-
-   //      Mat dist;
-   //      distanceTransform(drawing, dist, CV_DIST_L2, 3);
-   //      normalize(dist, dist, 0, 1., NORM_MINMAX);
-   //      threshold(dist, dist, .4, 1., CV_THRESH_BINARY);
-
-	  //   Mat kernel1 = Mat::ones(3, 3, CV_8UC1);
-	  //   dilate(dist, dist, kernel1);
-	  //   // imshow("Peaks", dist);
-
-	  //   Mat dist_8u;
-	  //   dist.convertTo(dist_8u, CV_8U);
-
-   //      std::vector<std::vector<cv::Point> > contoursm;
-   //      std::vector<Vec4i> hierarchym;
-
-   //      findContours(dist_8u, contoursm, hierarchym, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
-
-   //      Mat markers = Mat::zeros(dist.size(), CV_32SC1);
-   //      for(int isx = 0; isx < contoursm.size(); isx++) {
-			// drawContours(markers, contoursm, static_cast<int>(isx), Scalar::all(static_cast<int>(isx)+1), -1);	
-   //      }
-
-   //      circle(markers, Point(5,5), 3, CV_RGB(255,255,255), -1);
-	  //   // imshow("Markers", markers*10000);
-
-   //      t = ((double)getTickCount() - t)/getTickFrequency();
-   //      cout << "1: " << t << endl;
-   //      t = (double)getTickCount();
-
-   //      Mat grrrr;
-   //      Mat src;
-
-   //      cvtColor(img_result, grrrr, COLOR_BGR2GRAY);
-   //      cvtColor(markers, src, COLOR_GRAY2BGR);
-
-	  //   watershed(src, markers);
-
-
-	  //   t = ((double)getTickCount() - t)/getTickFrequency();
-	  //   cout << "3: " << t << endl;
-	  //   t = (double)getTickCount();
-
-	  //   Mat dst = Mat::zeros(markers.size(), CV_8UC1);
-
-	  //   for (int i = 0; i < markers.rows; i++)
-	  //   {
-	  //       for (int j = 0; j < markers.cols; j++)
-	  //       {
-	  //           int index = markers.at<int>(i,j);
-	  //           if(index==-1)
-	  //           	dst.at<uchar>(i,j) = 255;
-	  //       }
-	  //   }
-	  //   // imshow("Dst", dst);
-   //      std::vector<std::vector<cv::Point> > contoursw;
-   //      std::vector<Vec4i> hierarchyw;
-
-   //      findContours(dst, contoursw, hierarchyw, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE);
-
-   //      std::vector<Rect> boundRectw( contoursw.size() );
-
-   //      if(contoursw.size() > 0)
-   //      {
-   //      	for(int iw = 0; iw < contoursw.size(); iw++) {
-   //      		boundRectw[iw] = boundingRect( Mat(contoursw[iw]) );
-   //      		if ((boundRectw[iw].width*boundRectw[iw].height < 10000) && (boundRectw[iw].width*boundRectw[iw].height > 900) && (hierarchyw[iw][2]< 0))
-   //      		{
-   //      			cv::rectangle( img_raw, boundRectw[iw].tl(),boundRectw[iw].br(), Scalar(0,0,255), 2, 8, 0 );
-   //      		}
-   //      	}
-   //      }
-
         namedWindow( nameWindow6 , WINDOW_NORMAL );
-        imshow(nameWindow6,img_raw);
+        imshow(nameWindow6,img_result);
         if(parser.option("v"))
         {
         	if(waitKey(1) == 27)
