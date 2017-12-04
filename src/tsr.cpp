@@ -270,7 +270,6 @@ int main(int argc, char** argv)
         			drawContours( drawing, contours, idx, 255, CV_FILLED, 8, hierarchy );
         			// imshow("drawing" + to_string(idx), drawing);
 #ifdef 	OFFSET_BOUNDRECT
-
         			int tl_x = boundRect[idx].tl().x;
         			int tl_y = boundRect[idx].tl().y;
 
@@ -382,13 +381,20 @@ int main(int argc, char** argv)
         							{
         								// drawContours(img_result, contoursw, iw, Scalar(255,0,0), 1);
 #ifdef OFFSET_BOUNDRECT
-        								Rect rectbound (tl_x + boundRectw[iw].tl().x, tl_y + boundRectw[iw].tl().y,boundRectw[iw].width, boundRectw[iw].height);
-        								cv::rectangle( img_result, rectbound, Scalar(0,255,0), 2, 8, 0 );
+        								Rect dstbound (tl_x + boundRectw[iw].tl().x, tl_y + boundRectw[iw].tl().y,boundRectw[iw].width, boundRectw[iw].height);
+        								cv::rectangle( img_result, dstbound, Scalar(0,255,0), 2, 8, 0 );
 #else
-        								Rect rectbound (boundRectw[iw].tl().x + boundRect[idx].tl().x - 2, boundRectw[iw].tl().y + boundRect[idx].tl().y - 2,boundRectw[iw].width, boundRectw[iw].height);
-        								cv::rectangle( img_result, rectbound, Scalar(0,255,0), 2, 8, 0 );       						
+        								Rect dstbound (boundRectw[iw].tl().x + boundRect[idx].tl().x - 2, boundRectw[iw].tl().y + boundRect[idx].tl().y - 2,boundRectw[iw].width, boundRectw[iw].height);
+        								// cv::rectangle( img_result, dstbound, Scalar(0,255,0), 2, 8, 0 );       						
 #endif
-        								// cout << idx << endl;
+        								Mat image_roi = img_result(dstbound);
+        								cv_image<bgr_pixel> images_HOG(image_roi);
+        								std::vector<rect_detection> rects;
+
+        								evaluate_detectors(detectors, images_HOG, rects);
+        								if(rects.size() > 0)
+        									cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(255,0,0), 2, 8, 0 );
+        								else cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(0,255,0), 2, 8, 0 );
         							}
         						}
         					}
@@ -396,7 +402,6 @@ int main(int argc, char** argv)
         				}
         			}
         		}
-
         	}
         }
 
