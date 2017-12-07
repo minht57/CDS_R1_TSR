@@ -1,27 +1,27 @@
-	#include <dlib/svm_threaded.h>
-	#include <dlib/gui_widgets.h>
-	#include <dlib/image_processing.h>
-	#include <dlib/data_io.h>
-	#include <dlib/image_transforms.h>
-	#include <dlib/cmd_line_parser.h>
-	#include <dlib/opencv.h>
+#include <dlib/svm_threaded.h>
+#include <dlib/gui_widgets.h>
+#include <dlib/image_processing.h>
+#include <dlib/data_io.h>
+#include <dlib/image_transforms.h>
+#include <dlib/cmd_line_parser.h>
+#include <dlib/opencv.h>
 
-	#include "opencv2/imgcodecs.hpp"
-	#include <opencv2/highgui/highgui.hpp>
-	#include <opencv2/imgproc/imgproc.hpp>
-	#include <opencv2/opencv.hpp>
-	#include <cv.h>
+#include "opencv2/imgcodecs.hpp"
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/opencv.hpp>
+#include <cv.h>
 
-	#include <time.h>
-	#include <iostream>
-	#include <fstream>
-	#include <cstdlib>
+#include <time.h>
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
 
-	#include <string>
-	#include <vector>
+#include <string>
+#include <vector>
 
-	#include <stdio.h>
-	#include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 using namespace std;
 using namespace dlib;
@@ -39,9 +39,9 @@ const string nameWindow6 = "Result Image";
 
 int B_H_val = 100;
 int B_H_max = 150;
-int B_S_val = 50;
+int B_S_val = 80;
 int B_S_max = 255;
-int B_V_val = 50;
+int B_V_val = 110;
 int B_V_max = 255;
 
 int R_H_val = 150;
@@ -62,6 +62,12 @@ int C_ths_val = 0;
 int C_ths_max = 255;
 
 RNG rng(12345);
+
+bool bpause = false;
+bool capture = false;
+int ccpt = 0;
+
+VideoWriter video;
 	// Scalar red_min  = Scalar(0,36,0);
 	// Scalar red_max = Scalar(25, 255, 255);
 
@@ -73,6 +79,18 @@ struct TrafficSign {
 	name(name), svm_path(svm_path), color(color) {};
 };
 
+void CallBackFunc(int event, int x, int y, int flags, void* userdata)
+{
+	if  ( event == EVENT_MBUTTONDOWN )
+	{
+		bpause ^= true;
+	}
+	else if(event== EVENT_LBUTTONDOWN)
+	{
+		capture = true;
+
+	}
+}
 void Init() {
 	namedWindow(nameWindow2, 0);
 	    //createTrackbar("Blur size", nameWindow2, &B_blur_val, B_blur_max);
@@ -115,6 +133,7 @@ int main(int argc, char** argv)
 	parser.add_option("h","Display this help message.");
 	parser.add_option("v","Read video");
 	parser.add_option("i","Read image");
+	parser.add_option("s","Save video");
 
 	parser.parse(argc, argv);
 
@@ -145,7 +164,7 @@ int main(int argc, char** argv)
 	}
 	if(parser.option("v"))
 	{
-		cout << "okv" <<endl;
+		// cout << "okv" <<endl;
 		string videofile = string(parser[0]);
 		cout << "Opening videofile: \"" + videofile + "\"" << endl;
 		vid.open(videofile);
@@ -157,6 +176,8 @@ int main(int argc, char** argv)
 		}
 
 	}
+	if(parser.option("s"))	
+		video.open(string(parser[1])+"_video.avi",CV_FOURCC('M','J','P','G'),60, Size(640, 480), 1); 
 
 	cout << "Loading SVM detectors..." << endl;
 	std::vector<TrafficSign> signs;
@@ -184,6 +205,8 @@ int main(int argc, char** argv)
 		detectors.push_back(detector);
 	}
 
+	namedWindow( nameWindow6 , WINDOW_NORMAL );
+	setMouseCallback(nameWindow6, CallBackFunc, NULL);
 	    //Init();
 	double ttime = 0;
 	while (1) {
@@ -195,8 +218,21 @@ int main(int argc, char** argv)
 
 		if(parser.option("v"))
 		{
-			vid >> img_raw;
-			cnt++;
+			if (!bpause)
+			{
+				vid >> img_raw;
+				if(parser.option("s"))
+					video.write(img_raw);
+				cnt++;
+			}
+			if (capture)
+			{
+				cout << "capture image" << endl;
+				imwrite( "capture/"+ string(parser[1]) + "-" + to_string(ccpt)+".jpg" , img_raw );
+				ccpt++;
+				capture = false;
+			}
+
 		}
 		if (img_raw.empty())
 		{
@@ -207,12 +243,12 @@ int main(int argc, char** argv)
 			cout << "*	***************Video  Info***************	*"  <<	endl;
 			cout << "*	* Video time:		" << setprecision(2) << vid.get(CAP_PROP_FRAME_COUNT)/vid.get(CAP_PROP_FPS) << " s		*	*" << endl;
 			cout << "*	* Number of frame:	" << (int)vid.get(CAP_PROP_FRAME_COUNT) << "		*	*" <<endl;
-			cout << "*	* Frame size:		" << (int)vid.get(CV_CAP_PROP_FRAME_WIDTH) <<" x " << (int)vid.get(CAP_PROP_FRAME_HEIGHT) << "	*	*" <<endl;
+			cout << "*	* Frame size:		" << (int)vid.get(CV_CAP_PROP_FRAME_WIDTH) <<"x" << (int)vid.get(CAP_PROP_FRAME_HEIGHT) << "		*	*" <<endl;
 			cout << "*	* FPS:			" << vid.get(CAP_PROP_FPS) << "		*	*" <<endl;
 			cout << "*	**********Processing Info****************	*"  <<	endl;
 			cout << "*	* Total time:		" <<setprecision(2) << ttime << " s" << "		*	*" <<endl;
 			cout << "*	* Total frame:		" << cnt+1 << "		*	*" <<endl;
-			cout << "*	* Frame size:		" << (int)vid.get(CV_CAP_PROP_FRAME_WIDTH) <<" x " << (int)vid.get(CAP_PROP_FRAME_HEIGHT) << "	*	*" <<endl;
+			cout << "*	* Frame size:		" << (int)vid.get(CV_CAP_PROP_FRAME_WIDTH) <<"x" << (int)vid.get(CAP_PROP_FRAME_HEIGHT) << "		*	*" <<endl;
 			cout << "*	* FPS:			" << setprecision(2) << (double)cnt/ttime << "		*	*" <<endl;
 			cout <<	"*********************************************************" <<	endl <<	endl;
 			cout << "Video end" << endl;
@@ -250,7 +286,7 @@ int main(int argc, char** argv)
         std::vector<std::vector<cv::Point> > contours;
         std::vector<Vec4i> hierarchy;
 
-    imshow("imgLaplacian", edged);
+    // imshow("imgLaplacian", imgLaplacian);
 
         findContours(imgLaplacian, contours, hierarchy, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
 
@@ -262,61 +298,53 @@ int main(int argc, char** argv)
         	// drawContours( img_result, contours, idx, Scalar(255,0,0), 1 );
 
         	boundRect[idx] = boundingRect( Mat(contours[idx]) );
-
         	if ((boundRect[idx].width*boundRect[idx].height > 900) && (boundRect[idx].width*boundRect[idx].height < 50000))
         	{
+        		if((boundRect[idx].tl().x != 0)&&(boundRect[idx].tl().y != 0) && (boundRect[idx].br().x != img_raw.cols) && (boundRect[idx].br().y != img_raw.rows))
+        		{
         		if ( ( (float)boundRect[idx].width/boundRect[idx].height > 0.5) && ( (float)boundRect[idx].width/boundRect[idx].height < 1.3 ) )
         		{
         			drawContours( drawing, contours, idx, 255, CV_FILLED, 8, hierarchy );
         			// imshow("drawing" + to_string(idx), drawing);
-#ifdef 	OFFSET_BOUNDRECT
-        			int tl_x = boundRect[idx].tl().x;
-        			int tl_y = boundRect[idx].tl().y;
 
-        			int br_x = boundRect[idx].br().x;
-        			int br_y = boundRect[idx].br().y;
-
-        			int offset = 2;
-        			if(tl_x > offset-1) tl_x = tl_x - offset;
-
-        			if(tl_y > offset-1) tl_y = tl_y - offset;
-
-        			if(br_x + offset-1< img_result.cols) br_x = br_x + offset;
-
-        			if(br_y + offset-1< img_result.rows) br_y = br_y + offset;
-
-        			Rect roi(tl_x, tl_y, br_x - tl_x, br_y - tl_y);
-
-        			Mat roi_d = drawing(roi).clone();
-        			Mat roi_s = img_raw(roi).clone();
-
-#else
         			Mat crp_drw = drawing(boundRect[idx]).clone();
         			Mat src = img_raw(boundRect[idx]).clone();
 
         			int linewidth = 2;
-					Scalar value;
+        			Scalar value;
         			value = Scalar(0, 0, 0);
         			Mat roi_d;
         			copyMakeBorder( crp_drw, roi_d, linewidth, linewidth, linewidth, linewidth, BORDER_CONSTANT, value );
         			Mat roi_s;
         			copyMakeBorder( src, roi_s, linewidth, linewidth, linewidth, linewidth, BORDER_CONSTANT, value );
 
-#endif
-
         			Mat dist;
         			distanceTransform(roi_d, dist, CV_DIST_L2, 3);
         			normalize(dist, dist, 0, 1., NORM_MINMAX);
-        			threshold(dist, dist, .4, 1., CV_THRESH_BINARY);
+
+        				// namedWindow("drawing" + to_string(idx),WINDOW_NORMAL);
+        				// namedWindow("Dist" + to_string(idx) ,WINDOW_NORMAL);
+        				// imshow("drawing" + to_string(idx), crp_drw);
+        				// imshow("Dist" + to_string(idx), dist);
+        			// namedWindow("drawing" + to_string(idx),WINDOW_NORMAL);
+        			// namedWindow("Dist",WINDOW_NORMAL);
+        			// imshow("drawing" + to_string(idx), crp_drw);
+        			// imshow("Dist" + to_string(idx), dist);
+        			Mat dist_bw;
+        			threshold(dist, dist_bw, .4, 1., CV_THRESH_BINARY);
+
+        			
 
         			Mat kernel1 = Mat::ones(3, 3, CV_8UC1);
-        			dilate(dist, dist, kernel1);
+        			dilate(dist_bw, dist_bw, kernel1);
 
         			Mat dist_8u;
-        			dist.convertTo(dist_8u, CV_8U);
+        			dist_bw.convertTo(dist_8u, CV_8U);
 
         			std::vector<std::vector<cv::Point> > contoursm;
         			std::vector<Vec4i> hierarchym;
+
+        			
 
         			findContours(dist_8u, contoursm, hierarchym, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
 
@@ -325,8 +353,8 @@ int main(int argc, char** argv)
         				drawContours(markers, contoursm, static_cast<int>(isx), Scalar::all(static_cast<int>(isx)+1), -1);	
         			}
 
-        			circle(markers, Point(5,5), 3, CV_RGB(255,255,255), -1);
-		    // imshow("Markers", markers*10000);
+        			circle(markers, Point(1,1), 1, CV_RGB(255,255,255), -1);
+		    // imshow("Markers" + to_string(idx), markers*10000);
 
         			// t = ((double)getTickCount() - t)/getTickFrequency();
         			// ttime += t;
@@ -360,11 +388,11 @@ int main(int argc, char** argv)
 
       //   	namedWindow( "Dst", WINDOW_NORMAL );
    			// imshow("Dst", dst);
-        			
+
         			std::vector<std::vector<cv::Point> > contoursw;
         			std::vector<Vec4i> hierarchyw;
 
-        			findContours(dst, contoursw, hierarchyw, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE);
+        			findContours(dst, contoursw, hierarchyw, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
 
         			std::vector<Rect> boundRectw( contoursw.size() );
 
@@ -380,17 +408,12 @@ int main(int argc, char** argv)
         							if ( ( (float)boundRectw[iw].width/boundRectw[iw].height < 1.3) && ( (float)boundRectw[iw].width/boundRectw[iw].height > 0.5) )
         							{
         								// drawContours(img_result, contoursw, iw, Scalar(255,0,0), 1);
-#ifdef OFFSET_BOUNDRECT
-        								Rect dstbound (tl_x + boundRectw[iw].tl().x, tl_y + boundRectw[iw].tl().y,boundRectw[iw].width, boundRectw[iw].height);
-        								cv::rectangle( img_result, dstbound, Scalar(0,255,0), 2, 8, 0 );
-#else
         								Rect dstbound (boundRectw[iw].tl().x + boundRect[idx].tl().x - 2, boundRectw[iw].tl().y + boundRect[idx].tl().y - 2,boundRectw[iw].width, boundRectw[iw].height);
         								// cv::rectangle( img_result, dstbound, Scalar(0,255,0), 2, 8, 0 );       						
-#endif
         								Mat image_roi = img_result(dstbound);
         								cv_image<bgr_pixel> images_HOG(image_roi);
         								std::vector<rect_detection> rects;
-
+        								// cout << to_string(idx) << " "  << boundRectw[iw].tl() << endl;
         								evaluate_detectors(detectors, images_HOG, rects);
         								if(rects.size() > 0)
         									cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(255,0,0), 2, 8, 0 );
@@ -403,6 +426,7 @@ int main(int argc, char** argv)
         			}
         		}
         	}
+        	}
         }
 
         namedWindow( nameWindow6 , WINDOW_NORMAL );
@@ -413,6 +437,7 @@ int main(int argc, char** argv)
         		break;
         	t = ((double)getTickCount() - t)/getTickFrequency();
         	ttime += t;
+        	// destroyAllWindows();
         }
         if(parser.option("i"))
         {
@@ -430,5 +455,5 @@ int main(int argc, char** argv)
     // resfile << idx_detect << endl;
     // resfile.close();
 
-return 1;
+    return 1;
 }

@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named calib
+
+# Build rule for target.
+calib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 calib
+.PHONY : calib
+
+# fast build rule for target.
+calib/fast:
+	$(MAKE) -f CMakeFiles/calib.dir/build.make CMakeFiles/calib.dir/build
+.PHONY : calib/fast
+
+#=============================================================================
 # Target rules for targets named tsr
 
 # Build rule for target.
@@ -187,6 +200,33 @@ dlib: cmake_check_build_system
 dlib/fast:
 	$(MAKE) -f dlib_build/CMakeFiles/dlib.dir/build.make dlib_build/CMakeFiles/dlib.dir/build
 .PHONY : dlib/fast
+
+src/calib.o: src/calib.cpp.o
+
+.PHONY : src/calib.o
+
+# target to build an object file
+src/calib.cpp.o:
+	$(MAKE) -f CMakeFiles/calib.dir/build.make CMakeFiles/calib.dir/src/calib.cpp.o
+.PHONY : src/calib.cpp.o
+
+src/calib.i: src/calib.cpp.i
+
+.PHONY : src/calib.i
+
+# target to preprocess a source file
+src/calib.cpp.i:
+	$(MAKE) -f CMakeFiles/calib.dir/build.make CMakeFiles/calib.dir/src/calib.cpp.i
+.PHONY : src/calib.cpp.i
+
+src/calib.s: src/calib.cpp.s
+
+.PHONY : src/calib.s
+
+# target to generate assembly for a file
+src/calib.cpp.s:
+	$(MAKE) -f CMakeFiles/calib.dir/build.make CMakeFiles/calib.dir/src/calib.cpp.s
+.PHONY : src/calib.cpp.s
 
 src/detect.o: src/detect.cpp.o
 
@@ -329,6 +369,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... calib"
 	@echo "... rebuild_cache"
 	@echo "... tsr"
 	@echo "... hog_detector"
@@ -337,6 +378,9 @@ help:
 	@echo "... train_object_detector"
 	@echo "... detect"
 	@echo "... dlib"
+	@echo "... src/calib.o"
+	@echo "... src/calib.i"
+	@echo "... src/calib.s"
 	@echo "... src/detect.o"
 	@echo "... src/detect.i"
 	@echo "... src/detect.s"

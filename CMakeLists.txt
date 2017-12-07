@@ -32,4 +32,5 @@ add_source(train_object_detector)
 add_source(detect)
 add_source(view_hog)
 add_source(tsr)
+add_source(calib)
 
