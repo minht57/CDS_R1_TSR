@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/duongthanh3327/CuocDuaSo/tsr
+CMAKE_SOURCE_DIR = /home/minht57/CDS/CDS_R1_TSR
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/duongthanh3327/CuocDuaSo/tsr/build
+CMAKE_BINARY_DIR = /home/minht57/CDS/CDS_R1_TSR/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/detect.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/detect.dir/flags.make
 
 CMakeFiles/detect.dir/src/detect.cpp.o: CMakeFiles/detect.dir/flags.make
 CMakeFiles/detect.dir/src/detect.cpp.o: ../src/detect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duongthanh3327/CuocDuaSo/tsr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/detect.dir/src/detect.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/detect.dir/src/detect.cpp.o -c /home/duongthanh3327/CuocDuaSo/tsr/src/detect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/minht57/CDS/CDS_R1_TSR/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/detect.dir/src/detect.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/detect.dir/src/detect.cpp.o -c /home/minht57/CDS/CDS_R1_TSR/src/detect.cpp
 
 CMakeFiles/detect.dir/src/detect.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/detect.dir/src/detect.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duongthanh3327/CuocDuaSo/tsr/src/detect.cpp > CMakeFiles/detect.dir/src/detect.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/minht57/CDS/CDS_R1_TSR/src/detect.cpp > CMakeFiles/detect.dir/src/detect.cpp.i
 
 CMakeFiles/detect.dir/src/detect.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/detect.dir/src/detect.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duongthanh3327/CuocDuaSo/tsr/src/detect.cpp -o CMakeFiles/detect.dir/src/detect.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/minht57/CDS/CDS_R1_TSR/src/detect.cpp -o CMakeFiles/detect.dir/src/detect.cpp.s
 
 CMakeFiles/detect.dir/src/detect.cpp.o.requires:
 
@@ -91,33 +91,62 @@ detect_EXTERNAL_OBJECTS =
 detect: CMakeFiles/detect.dir/src/detect.cpp.o
 detect: CMakeFiles/detect.dir/build.make
 detect: dlib_build/libdlib.a
-detect: /usr/local/lib/libopencv_shape.so.3.2.0
-detect: /usr/local/lib/libopencv_stitching.so.3.2.0
-detect: /usr/local/lib/libopencv_superres.so.3.2.0
-detect: /usr/local/lib/libopencv_videostab.so.3.2.0
-detect: /usr/local/lib/libopencv_viz.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_stitching3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_superres3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_videostab3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_aruco3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_bgsegm3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_bioinspired3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_ccalib3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_cvv3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_datasets3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_dpm3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_face3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_fuzzy3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_hdf3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_line_descriptor3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_optflow3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_plot3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_reg3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_saliency3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_stereo3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_structured_light3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_surface_matching3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_text3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_xfeatures2d3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_ximgproc3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_xobjdetect3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_xphoto3.so.3.2.0
 detect: /usr/lib/x86_64-linux-gnu/libnsl.so
 detect: /usr/lib/x86_64-linux-gnu/libSM.so
 detect: /usr/lib/x86_64-linux-gnu/libICE.so
 detect: /usr/lib/x86_64-linux-gnu/libX11.so
 detect: /usr/lib/x86_64-linux-gnu/libXext.so
+detect: /usr/lib/x86_64-linux-gnu/libgif.so
 detect: /usr/lib/x86_64-linux-gnu/libpng.so
 detect: /usr/lib/x86_64-linux-gnu/libz.so
 detect: /usr/lib/x86_64-linux-gnu/libjpeg.so
-detect: /usr/local/lib/libopencv_objdetect.so.3.2.0
-detect: /usr/local/lib/libopencv_calib3d.so.3.2.0
-detect: /usr/local/lib/libopencv_features2d.so.3.2.0
-detect: /usr/local/lib/libopencv_flann.so.3.2.0
-detect: /usr/local/lib/libopencv_highgui.so.3.2.0
-detect: /usr/local/lib/libopencv_ml.so.3.2.0
-detect: /usr/local/lib/libopencv_photo.so.3.2.0
-detect: /usr/local/lib/libopencv_video.so.3.2.0
-detect: /usr/local/lib/libopencv_videoio.so.3.2.0
-detect: /usr/local/lib/libopencv_imgcodecs.so.3.2.0
-detect: /usr/local/lib/libopencv_imgproc.so.3.2.0
-detect: /usr/local/lib/libopencv_core.so.3.2.0
+detect: /usr/lib/libblas.so
+detect: /usr/lib/liblapack.so
+detect: /usr/lib/x86_64-linux-gnu/libsqlite3.so
+detect: /opt/ros/kinetic/lib/libopencv_shape3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_video3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_viz3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_phase_unwrapping3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_rgbd3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_calib3d3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_features2d3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_flann3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_objdetect3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_ml3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_highgui3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_photo3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_videoio3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_imgcodecs3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_imgproc3.so.3.2.0
+detect: /opt/ros/kinetic/lib/libopencv_core3.so.3.2.0
 detect: CMakeFiles/detect.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/duongthanh3327/CuocDuaSo/tsr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable detect"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/minht57/CDS/CDS_R1_TSR/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable detect"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/detect.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -134,6 +163,6 @@ CMakeFiles/detect.dir/clean:
 .PHONY : CMakeFiles/detect.dir/clean
 
 CMakeFiles/detect.dir/depend:
-	cd /home/duongthanh3327/CuocDuaSo/tsr/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/duongthanh3327/CuocDuaSo/tsr /home/duongthanh3327/CuocDuaSo/tsr /home/duongthanh3327/CuocDuaSo/tsr/build /home/duongthanh3327/CuocDuaSo/tsr/build /home/duongthanh3327/CuocDuaSo/tsr/build/CMakeFiles/detect.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/minht57/CDS/CDS_R1_TSR/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/minht57/CDS/CDS_R1_TSR /home/minht57/CDS/CDS_R1_TSR /home/minht57/CDS/CDS_R1_TSR/build /home/minht57/CDS/CDS_R1_TSR/build /home/minht57/CDS/CDS_R1_TSR/build/CMakeFiles/detect.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/detect.dir/depend
 

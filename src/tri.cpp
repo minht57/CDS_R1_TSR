@@ -136,17 +136,19 @@ void CalcPercent(int * Src1, int * Src2, float * Kernel ,float * Des)
 {
     float Des_[16];
     float Result_ = 0;
+    int count_zero = 0;
     for (int i = 0; i < 16; i++)
     {
         if(Src2[i] == 0)
         {
+            count_zero++;
             continue;
         }
         Des_[i] = Kernel[i] * (float)Src1[i] / Src2[i];
         Result_ += Des_[i];
         // cout << "Des_[" << i <<"] " << Des_[i] <<  " Result " << Result_ << endl;
     }
-    *Des = Result_ / 16;
+    *Des = Result_ / (16 - count_zero);
     // cout << "Result_ " << Result_ << " - Percent " << *Des << endl;
     // Des[0] = Kernel[0] * (float)Src1[0] / Src2[0];
     // Des[1] = Kernel[1] * (float)Src1[1] / Src2[1];
@@ -270,8 +272,24 @@ int main(int argc, char** argv)
 
     fillPoly(triangle_, ppt, npt, 1, 255, 8);
 
+
+    float kernel_triangle2[20] = {1, 1, 1, 1, 1, 1, 1, 1 ,1 ,1 ,
+                                  1, 1, 1, 1, 1, 1, 1, 1 ,1 ,1};
+
+    Mat triangle2_ = Mat::zeros( 80, 80, CV_8UC1 );
+
+    rook_points[0][0] = Point(0, 0);
+    rook_points[0][1] = Point(80, 0);
+    rook_points[0][2] = Point(40, 80);
+
+    const Point* ppt1[1] = { rook_points[0] };
+
+    fillPoly(triangle2_, ppt1, npt, 1, 255, 8);
+
     // namedWindow( "Triangle", WINDOW_NORMAL );
     // imshow("Triangle",triangle_);
+    // namedWindow( "Triangle 2", WINDOW_NORMAL );
+    // imshow("Triangle 2",triangle2_);
 
     float kernel_square[20] = {1, 1, 1, 1, 1, 1, 1, 1 ,1 ,1 ,
                                1, 1, 1, 1, 1, 1, 1, 1 ,1 ,1};
@@ -474,8 +492,8 @@ int main(int argc, char** argv)
                     Size size2(80,80);
                     resize(image_roi2,image_roi2,size2);
 
-                    namedWindow( "Roi Image 2", WINDOW_NORMAL );
-                    imshow("Roi Image 2",image_roi2);
+                    // namedWindow( "Roi Image 2", WINDOW_NORMAL );
+                    // imshow("Roi Image 2",image_roi2);
 
                     Mat image_test;
 
@@ -524,7 +542,7 @@ int main(int argc, char** argv)
                     //          Result2[14] << " " <<\
                     //          Result2[15] <<endl;
 
-                    float percent_circle, percent_trianle, percent_square;
+                    float percent_circle, percent_trianle, percent_trianle2, percent_square;
                     CalcPercent(Result2, Result1, kernel_circle, &percent_circle);
 
                     image_test = image_roi2.clone();
@@ -571,11 +589,55 @@ int main(int argc, char** argv)
 
                     CalcPercent(Result2, Result1, kernel_triangle, &percent_trianle);
 
+                    // namedWindow( "X_Triangle", WINDOW_NORMAL );
+                    // imshow("X_Triangle",image_test);
+
+                    image_test = image_roi2.clone();
+                    image_test = image_test & triangle2_;
+
+                    CalcHistogram (triangle2_, Result1);
+                    // cout  << Result1[0] << " " <<\
+                    //          Result1[1] << " " <<\
+                    //          Result1[2] << " " <<\
+                    //          Result1[3] << " " <<\
+                    //          Result1[4] << " " <<\
+                    //          Result1[5] << " " <<\
+                    //          Result1[6] << " " <<\
+                    //          Result1[7] << " " <<\
+                    //          Result1[8] << " " <<\
+                    //          Result1[9] << " " <<\
+                    //          Result1[10] << " " <<\
+                    //          Result1[11] << " " <<\
+                    //          Result1[12] << " " <<\
+                    //          Result1[13] << " " <<\
+                    //          Result1[14] << " " <<\
+                    //          Result1[15] <<endl;
+
+                    CalcHistogram (image_test, Result2);
+                    // cout  << Result2[0] << " " <<\
+                    //          Result2[1] << " " <<\
+                    //          Result2[2] << " " <<\
+                    //          Result2[3] << " " <<\
+                    //          Result2[4] << " " <<\
+                    //          Result2[5] << " " <<\
+                    //          Result2[6] << " " <<\
+                    //          Result2[7] << " " <<\
+                    //          Result2[8] << " " <<\
+                    //          Result2[9] << " " <<\
+                    //          Result2[10] << " " <<\
+                    //          Result2[11] << " " <<\
+                    //          Result2[12] << " " <<\
+                    //          Result2[13] << " " <<\
+                    //          Result2[14] << " " <<\
+                    //          Result2[15] <<endl;
+
+                    CalcPercent(Result2, Result1, kernel_triangle2, &percent_trianle2);
+
                     image_test = image_roi2.clone();
                     image_test = image_test & square_;
 
-                    namedWindow( "X_Square", WINDOW_NORMAL );
-                    imshow("X_Square",image_test);
+                    // namedWindow( "X_Square", WINDOW_NORMAL );
+                    // imshow("X_Square",image_test);
 
                     CalcHistogram (square_, Result1);
                     // cout  << Result1[0] << " " <<\
@@ -616,17 +678,21 @@ int main(int argc, char** argv)
                     CalcPercent(Result2, Result1, kernel_square, &percent_square);
                     // cout <<"Circle " << percent_circle << "\t Triangle " << percent_trianle << " \t Square " << percent_square << endl;
 
-                    if((percent_circle > 0.7) && (percent_trianle > 0.7) && (percent_square > 0.7))
+                    if((percent_circle > 0.8) && (percent_trianle > 0.8) && (percent_square > 0.8))
                     {
-                        cout << idx_frame << "\t Vuong" << endl;
+                        cout << idx_frame << "\t Vuong\t" << percent_square << endl;
                     }
                     else if (percent_circle > 0.8)
                     {
-                        cout << idx_frame << "\t Tron" << endl;
+                        cout << idx_frame << "\t Tron\t" << percent_circle << endl;
                     }
                     else if (percent_trianle > 0.8)
                     {
-                        cout << idx_frame << "\t Tam giac" << endl;
+                        cout << idx_frame << "\t Tam giac xuoi\t" << percent_trianle << endl;
+                    }
+                    else if (percent_trianle2 > 0.8)
+                    {
+                        cout << idx_frame << "\t Tam giac nguoc\t" << percent_trianle2 << endl;
                     }
                     else
                     {

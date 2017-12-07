@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/duongthanh3327/CuocDuaSo/tsr
+CMAKE_SOURCE_DIR = /home/minht57/CDS/CDS_R1_TSR
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/duongthanh3327/CuocDuaSo/tsr/build
+CMAKE_BINARY_DIR = /home/minht57/CDS/CDS_R1_TSR/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/duongthanh3327/CuocDuaSo/tsr/build/CMakeFiles /home/duongthanh3327/CuocDuaSo/tsr/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/minht57/CDS/CDS_R1_TSR/build/CMakeFiles /home/minht57/CDS/CDS_R1_TSR/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/duongthanh3327/CuocDuaSo/tsr/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/minht57/CDS/CDS_R1_TSR/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,6 +124,32 @@ tsr/fast:
 .PHONY : tsr/fast
 
 #=============================================================================
+# Target rules for targets named detect
+
+# Build rule for target.
+detect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 detect
+.PHONY : detect
+
+# fast build rule for target.
+detect/fast:
+	$(MAKE) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/build
+.PHONY : detect/fast
+
+#=============================================================================
+# Target rules for targets named tri_test
+
+# Build rule for target.
+tri_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tri_test
+.PHONY : tri_test
+
+# fast build rule for target.
+tri_test/fast:
+	$(MAKE) -f CMakeFiles/tri_test.dir/build.make CMakeFiles/tri_test.dir/build
+.PHONY : tri_test/fast
+
+#=============================================================================
 # Target rules for targets named hog_detector
 
 # Build rule for target.
@@ -150,6 +176,19 @@ view_hog/fast:
 .PHONY : view_hog/fast
 
 #=============================================================================
+# Target rules for targets named tri
+
+# Build rule for target.
+tri: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tri
+.PHONY : tri
+
+# fast build rule for target.
+tri/fast:
+	$(MAKE) -f CMakeFiles/tri.dir/build.make CMakeFiles/tri.dir/build
+.PHONY : tri/fast
+
+#=============================================================================
 # Target rules for targets named train_object_detector
 
 # Build rule for target.
@@ -161,19 +200,6 @@ train_object_detector: cmake_check_build_system
 train_object_detector/fast:
 	$(MAKE) -f CMakeFiles/train_object_detector.dir/build.make CMakeFiles/train_object_detector.dir/build
 .PHONY : train_object_detector/fast
-
-#=============================================================================
-# Target rules for targets named detect
-
-# Build rule for target.
-detect: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 detect
-.PHONY : detect
-
-# fast build rule for target.
-detect/fast:
-	$(MAKE) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/build
-.PHONY : detect/fast
 
 #=============================================================================
 # Target rules for targets named dlib
@@ -269,6 +295,60 @@ src/train_object_detector.cpp.s:
 	$(MAKE) -f CMakeFiles/train_object_detector.dir/build.make CMakeFiles/train_object_detector.dir/src/train_object_detector.cpp.s
 .PHONY : src/train_object_detector.cpp.s
 
+src/tri.o: src/tri.cpp.o
+
+.PHONY : src/tri.o
+
+# target to build an object file
+src/tri.cpp.o:
+	$(MAKE) -f CMakeFiles/tri.dir/build.make CMakeFiles/tri.dir/src/tri.cpp.o
+.PHONY : src/tri.cpp.o
+
+src/tri.i: src/tri.cpp.i
+
+.PHONY : src/tri.i
+
+# target to preprocess a source file
+src/tri.cpp.i:
+	$(MAKE) -f CMakeFiles/tri.dir/build.make CMakeFiles/tri.dir/src/tri.cpp.i
+.PHONY : src/tri.cpp.i
+
+src/tri.s: src/tri.cpp.s
+
+.PHONY : src/tri.s
+
+# target to generate assembly for a file
+src/tri.cpp.s:
+	$(MAKE) -f CMakeFiles/tri.dir/build.make CMakeFiles/tri.dir/src/tri.cpp.s
+.PHONY : src/tri.cpp.s
+
+src/tri_test.o: src/tri_test.cpp.o
+
+.PHONY : src/tri_test.o
+
+# target to build an object file
+src/tri_test.cpp.o:
+	$(MAKE) -f CMakeFiles/tri_test.dir/build.make CMakeFiles/tri_test.dir/src/tri_test.cpp.o
+.PHONY : src/tri_test.cpp.o
+
+src/tri_test.i: src/tri_test.cpp.i
+
+.PHONY : src/tri_test.i
+
+# target to preprocess a source file
+src/tri_test.cpp.i:
+	$(MAKE) -f CMakeFiles/tri_test.dir/build.make CMakeFiles/tri_test.dir/src/tri_test.cpp.i
+.PHONY : src/tri_test.cpp.i
+
+src/tri_test.s: src/tri_test.cpp.s
+
+.PHONY : src/tri_test.s
+
+# target to generate assembly for a file
+src/tri_test.cpp.s:
+	$(MAKE) -f CMakeFiles/tri_test.dir/build.make CMakeFiles/tri_test.dir/src/tri_test.cpp.s
+.PHONY : src/tri_test.cpp.s
+
 src/tsr.o: src/tsr.cpp.o
 
 .PHONY : src/tsr.o
@@ -331,11 +411,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... tsr"
+	@echo "... detect"
+	@echo "... tri_test"
 	@echo "... hog_detector"
 	@echo "... edit_cache"
 	@echo "... view_hog"
+	@echo "... tri"
 	@echo "... train_object_detector"
-	@echo "... detect"
 	@echo "... dlib"
 	@echo "... src/detect.o"
 	@echo "... src/detect.i"
@@ -346,6 +428,12 @@ help:
 	@echo "... src/train_object_detector.o"
 	@echo "... src/train_object_detector.i"
 	@echo "... src/train_object_detector.s"
+	@echo "... src/tri.o"
+	@echo "... src/tri.i"
+	@echo "... src/tri.s"
+	@echo "... src/tri_test.o"
+	@echo "... src/tri_test.i"
+	@echo "... src/tri_test.s"
 	@echo "... src/tsr.o"
 	@echo "... src/tsr.i"
 	@echo "... src/tsr.s"

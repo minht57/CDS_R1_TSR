@@ -8526,7 +8526,7 @@ string
 ../error.h
 ../dlib/dlib/../dlib/error.h
 
-/home/duongthanh3327/CuocDuaSo/tsr/src/hog_detector.cpp
+/home/minht57/CDS/CDS_R1_TSR/src/hog_detector.cpp
 dlib/svm_threaded.h
 -
 dlib/gui_widgets.h

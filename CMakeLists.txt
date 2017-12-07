@@ -27,6 +27,7 @@ MACRO(add_source name)
     TARGET_LINK_LIBRARIES(${name} ${OpenCV_LIBS} )
 ENDMACRO()
 
+add_source(tri_test)
 add_source(tri)
 add_source(hog_detector)
 add_source(train_object_detector)
