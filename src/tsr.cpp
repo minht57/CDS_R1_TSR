@@ -34,8 +34,6 @@ const string nameWindow4 = "EDGED Image";
 const string nameWindow5 = "InRange Image";
 const string nameWindow6 = "Result Image";
 
-	// int B_blur_val = 4;
-	// int B_blur_max = 255;
 
 int B_H_val = 100;
 int B_H_max = 150;
@@ -52,11 +50,18 @@ int R_V_val = 50;
 int R_V_max = 255;
 
 int R2_H_val = 0;
-int R2_H_max = 05;
+int R2_H_max = 5;
 int R2_S_val = 90;
 int R2_S_max = 255;
 int R2_V_val = 50;
 int R2_V_max = 255;
+
+int K_H_val = 105;
+int K_H_max = 255;
+int K_S_val = 40;
+int K_S_max = 255;
+int K_V_val = 30;
+int K_V_max = 100;
 
 int C_ths_val = 0;
 int C_ths_max = 255;
@@ -88,41 +93,7 @@ void CallBackFunc(int event, int x, int y, int flags, void* userdata)
 	else if(event== EVENT_LBUTTONDOWN)
 	{
 		capture = true;
-
 	}
-}
-void Init() {
-	namedWindow(nameWindow2, 0);
-	    //createTrackbar("Blur size", nameWindow2, &B_blur_val, B_blur_max);
-
-	createTrackbar("B H MIN val",nameWindow2,&B_H_val, 255);
-	createTrackbar("B H MAX val",nameWindow2,&B_H_max, 255);
-
-	createTrackbar("B S MIN val",nameWindow2,&B_S_val, 255);
-	createTrackbar("B S MAX val",nameWindow2,&B_S_max, 255);
-
-	createTrackbar("B V MIN val",nameWindow2,&B_V_val, 255);
-	createTrackbar("B V MAX val",nameWindow2,&B_V_max, 255);
-
-	createTrackbar("R H MIN val",nameWindow2,&R_H_val, 255);
-	createTrackbar("R H MAX val",nameWindow2,&R_H_max, 255);
-
-	createTrackbar("R S MIN val",nameWindow2,&R_S_val, 255);
-	createTrackbar("R S MAX val",nameWindow2,&R_S_max, 255);
-
-	createTrackbar("R V MIN val",nameWindow2,&R_V_val, 255);
-	createTrackbar("R V MAX val",nameWindow2,&R_V_max, 255);
-
-	createTrackbar("R2 H MIN val",nameWindow2,&R2_H_val, 255);
-	createTrackbar("R2 H MAX val",nameWindow2,&R2_H_max, 255);
-
-	createTrackbar("R2 S MIN val",nameWindow2,&R2_S_val, 255);
-	createTrackbar("R2 S MAX val",nameWindow2,&R2_S_max, 255);
-
-	createTrackbar("R2 V MIN val",nameWindow2,&R2_V_val, 255);
-	createTrackbar("R2 V MAX val",nameWindow2,&R2_V_max, 255);
-
-	createTrackbar("C",nameWindow2,&C_ths_val, C_ths_max);
 }
 
 int main(int argc, char** argv)
@@ -207,14 +178,12 @@ int main(int argc, char** argv)
 
 	namedWindow( nameWindow6 , WINDOW_NORMAL );
 	setMouseCallback(nameWindow6, CallBackFunc, NULL);
-	    //Init();
 	double ttime = 0;
 	while (1) {
 
 		double t = (double)getTickCount();
 
-		Mat img_HSV, img_result, img_Grey, maskr, maskr1, maskr2, maskb, res, out, out1, edged;
-		Mat masks1,masks2;
+		Mat img_HSV, img_result, maskr, maskr1, maskr2, maskb, maskk, edged;
 
 		if(parser.option("v"))
 		{
@@ -264,8 +233,10 @@ int main(int argc, char** argv)
 		inRange(img_HSV, Scalar(B_H_val, B_S_val, B_V_val), Scalar(B_H_max, B_S_max, B_V_max), maskb);
 		inRange(img_HSV, Scalar(R_H_val, R_S_val, R_V_val), Scalar(R_H_max, R_S_max, R_V_max), maskr1);
 		inRange(img_HSV, Scalar(R2_H_val, R2_S_val, R2_V_val), Scalar(R2_H_max, R2_S_max, R2_V_max), maskr2);
+		inRange(img_HSV, Scalar(K_H_val, K_S_val, K_V_val), Scalar(K_H_max, K_S_max, K_V_max), maskk);
 		edged = maskr1 + maskr2 + maskb;
 
+		imshow("Black threshold", maskk);
 		Mat kernel = (Mat_<float>(3,3) <<
 			1,  1, 1,
 			1, -8, 1,
@@ -302,25 +273,25 @@ int main(int argc, char** argv)
         	{
         		if((boundRect[idx].tl().x != 0)&&(boundRect[idx].tl().y != 0) && (boundRect[idx].br().x != img_raw.cols) && (boundRect[idx].br().y != img_raw.rows))
         		{
-        		if ( ( (float)boundRect[idx].width/boundRect[idx].height > 0.5) && ( (float)boundRect[idx].width/boundRect[idx].height < 1.3 ) )
-        		{
-        			drawContours( drawing, contours, idx, 255, CV_FILLED, 8, hierarchy );
+        			if ( ( (float)boundRect[idx].width/boundRect[idx].height > 0.5) && ( (float)boundRect[idx].width/boundRect[idx].height < 1.3 ) )
+        			{
+        				drawContours( drawing, contours, idx, 255, CV_FILLED, 8, hierarchy );
         			// imshow("drawing" + to_string(idx), drawing);
 
-        			Mat crp_drw = drawing(boundRect[idx]).clone();
-        			Mat src = img_raw(boundRect[idx]).clone();
+        				Mat crp_drw = drawing(boundRect[idx]).clone();
+        				Mat src = img_raw(boundRect[idx]).clone();
 
-        			int linewidth = 2;
-        			Scalar value;
-        			value = Scalar(0, 0, 0);
-        			Mat roi_d;
-        			copyMakeBorder( crp_drw, roi_d, linewidth, linewidth, linewidth, linewidth, BORDER_CONSTANT, value );
-        			Mat roi_s;
-        			copyMakeBorder( src, roi_s, linewidth, linewidth, linewidth, linewidth, BORDER_CONSTANT, value );
+        				int linewidth = 2;
+        				Scalar value;
+        				value = Scalar(0, 0, 0);
+        				Mat roi_d;
+        				copyMakeBorder( crp_drw, roi_d, linewidth, linewidth, linewidth, linewidth, BORDER_CONSTANT, value );
+        				Mat roi_s;
+        				copyMakeBorder( src, roi_s, linewidth, linewidth, linewidth, linewidth, BORDER_CONSTANT, value );
 
-        			Mat dist;
-        			distanceTransform(roi_d, dist, CV_DIST_L2, 3);
-        			normalize(dist, dist, 0, 1., NORM_MINMAX);
+        				Mat dist;
+        				distanceTransform(roi_d, dist, CV_DIST_L2, 3);
+        				normalize(dist, dist, 0, 1., NORM_MINMAX);
 
         				// namedWindow("drawing" + to_string(idx),WINDOW_NORMAL);
         				// namedWindow("Dist" + to_string(idx) ,WINDOW_NORMAL);
@@ -330,30 +301,28 @@ int main(int argc, char** argv)
         			// namedWindow("Dist",WINDOW_NORMAL);
         			// imshow("drawing" + to_string(idx), crp_drw);
         			// imshow("Dist" + to_string(idx), dist);
-        			Mat dist_bw;
-        			threshold(dist, dist_bw, .4, 1., CV_THRESH_BINARY);
 
-        			
+        				Mat dist_bw;
+        				threshold(dist, dist_bw, .4, 1., CV_THRESH_BINARY);
 
-        			Mat kernel1 = Mat::ones(3, 3, CV_8UC1);
-        			dilate(dist_bw, dist_bw, kernel1);
+        				Mat kernel1 = Mat::ones(3, 3, CV_8UC1);
+        				dilate(dist_bw, dist_bw, kernel1);
 
-        			Mat dist_8u;
-        			dist_bw.convertTo(dist_8u, CV_8U);
+        				Mat dist_8u;
+        				dist_bw.convertTo(dist_8u, CV_8U);
 
-        			std::vector<std::vector<cv::Point> > contoursm;
-        			std::vector<Vec4i> hierarchym;
+        				std::vector<std::vector<cv::Point> > contoursm;
+        				std::vector<Vec4i> hierarchym;
 
-        			
+        				findContours(dist_8u, contoursm, hierarchym, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
 
-        			findContours(dist_8u, contoursm, hierarchym, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
+        				Mat markers = Mat::zeros(dist.size(), CV_32SC1);
+                        
+        				for(int isx = 0; isx < contoursm.size(); isx++) {
+        					drawContours(markers, contoursm, static_cast<int>(isx), Scalar::all(static_cast<int>(isx)+1), -1);	
+        				}
 
-        			Mat markers = Mat::zeros(dist.size(), CV_32SC1);
-        			for(int isx = 0; isx < contoursm.size(); isx++) {
-        				drawContours(markers, contoursm, static_cast<int>(isx), Scalar::all(static_cast<int>(isx)+1), -1);	
-        			}
-
-        			circle(markers, Point(1,1), 1, CV_RGB(255,255,255), -1);
+        				circle(markers, Point(1,1), 1, CV_RGB(255,255,255), -1);
 		    // imshow("Markers" + to_string(idx), markers*10000);
 
         			// t = ((double)getTickCount() - t)/getTickFrequency();
@@ -362,7 +331,7 @@ int main(int argc, char** argv)
         			// t = (double)getTickCount();
 
 
-        			watershed(roi_s, markers);
+        				watershed(roi_s, markers);
 
 
         			// t = ((double)getTickCount() - t)/getTickFrequency();
@@ -370,63 +339,87 @@ int main(int argc, char** argv)
         			// cout << "3: " << t << endl;
         			// t = (double)getTickCount();
 
-        			Mat dst = Mat::zeros(markers.size(), CV_8UC1);
+        				Mat dst = Mat::zeros(markers.size(), CV_8UC1);
 
-        			for (int i = 0; i < markers.rows; i++)
-        			{
-        				for (int j = 0; j < markers.cols; j++)
+        				for (int i = 0; i < markers.rows; i++)
         				{
-        					int index = markers.at<int>(i,j);
-        					if(index==1)
-        						dst.at<uchar>(i,j) = 255;
-        					else dst.at<uchar>(i,j) = 0;
+        					for (int j = 0; j < markers.cols; j++)
+        					{
+        						int index = markers.at<int>(i,j);
+        						if(index==1)
+        							dst.at<uchar>(i,j) = 255;
+        						else dst.at<uchar>(i,j) = 0;
+        					}
         				}
-        			}
 
         			// bitwise_not(dst,dst);
-        			dst = dst & roi_d;
+        				dst = dst & roi_d;
 
       //   	namedWindow( "Dst", WINDOW_NORMAL );
    			// imshow("Dst", dst);
 
-        			std::vector<std::vector<cv::Point> > contoursw;
-        			std::vector<Vec4i> hierarchyw;
+        				std::vector<std::vector<cv::Point> > contoursw;
+        				std::vector<Vec4i> hierarchyw;
 
-        			findContours(dst, contoursw, hierarchyw, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
+        				findContours(dst, contoursw, hierarchyw, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
 
-        			std::vector<Rect> boundRectw( contoursw.size() );
+        				std::vector<Rect> boundRectw( contoursw.size() );
 
-        			if(contoursw.size() > 0)
-        			{
-        				for(int iw = 0; iw < contoursw.size(); iw++) {
+        				if(contoursw.size() > 0)
+        				{
+        					for(int iw = 0; iw < contoursw.size(); iw++) {
 
-        					if (hierarchyw[iw][2]< 0)
-        					{        						
-        						boundRectw[iw] = boundingRect( Mat(contoursw[iw]) );
-        						if ( ( (boundRectw[iw].width*boundRectw[iw].height) > 900) && ( (boundRectw[iw].width*boundRectw[iw].height)  < 50000) )
-        						{        							
-        							if ( ( (float)boundRectw[iw].width/boundRectw[iw].height < 1.3) && ( (float)boundRectw[iw].width/boundRectw[iw].height > 0.5) )
-        							{
+        						if (hierarchyw[iw][2]< 0)
+        						{        						
+        							boundRectw[iw] = boundingRect( Mat(contoursw[iw]) );
+        							if ( ( (boundRectw[iw].width*boundRectw[iw].height) > 900) && ( (boundRectw[iw].width*boundRectw[iw].height)  < 50000) )
+        							{        							
+        								if ( ( (float)boundRectw[iw].width/boundRectw[iw].height < 1.3) && ( (float)boundRectw[iw].width/boundRectw[iw].height > 0.5) )
+        								{
         								// drawContours(img_result, contoursw, iw, Scalar(255,0,0), 1);
-        								Rect dstbound (boundRectw[iw].tl().x + boundRect[idx].tl().x - 2, boundRectw[iw].tl().y + boundRect[idx].tl().y - 2,boundRectw[iw].width, boundRectw[iw].height);
+        									Rect dstbound (boundRectw[iw].tl().x + boundRect[idx].tl().x - 2, boundRectw[iw].tl().y + boundRect[idx].tl().y - 2,boundRectw[iw].width, boundRectw[iw].height);
         								// cv::rectangle( img_result, dstbound, Scalar(0,255,0), 2, 8, 0 );       						
-        								Mat image_roi = img_result(dstbound);
-        								cv_image<bgr_pixel> images_HOG(image_roi);
-        								std::vector<rect_detection> rects;
+        									Mat image_roi = img_result(dstbound);
+        									cv_image<bgr_pixel> images_HOG(image_roi);
+        									std::vector<rect_detection> rects;
         								// cout << to_string(idx) << " "  << boundRectw[iw].tl() << endl;
-        								evaluate_detectors(detectors, images_HOG, rects);
-        								if(rects.size() > 0)
-        									cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(255,0,0), 2, 8, 0 );
-        								else cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(0,255,0), 2, 8, 0 );
+        									evaluate_detectors(detectors, images_HOG, rects);
+        									if(rects.size() > 0)
+        										cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(255,0,0), 2, 8, 0 );
+        									else cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(0,255,0), 2, 8, 0 );
+        								}
         							}
         						}
         					}
-
         				}
         			}
         		}
         	}
-        	}
+        }
+
+        std::vector<std::vector<cv::Point> > contoursk;
+        std::vector<Vec4i> hierarchyk;
+
+        findContours(maskk, contoursk, hierarchyk, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
+
+        std::vector<Rect> boundRectk( contoursk.size() );
+        Mat drawk = Mat::zeros(maskk.size(), CV_8UC1);
+
+        for(int idx = 0; idx < contoursk.size(); idx++)
+        {
+        	boundRectk[idx] = boundingRect( Mat(contoursk[idx]) );
+        	int calc_area = boundRectk[idx].width * boundRectk[idx].height;
+        	int areak = contourArea(contoursk[idx]);
+
+            if (areak > 100)
+            {
+                if ( ((float)areak/calc_area < 0.5) && ((float)areak/calc_area>0.4) )
+                {
+                    cv::rectangle( img_result, boundRectk[idx].tl(), boundRectk[idx].br(), Scalar(0,0,255), 2, 8, 0 );
+                }
+            }
+            
+
         }
 
         namedWindow( nameWindow6 , WINDOW_NORMAL );
