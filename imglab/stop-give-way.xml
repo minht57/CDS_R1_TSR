@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<?xml-stylesheet type='text/xsl' href='image_metadata_stylesheet.xsl'?>
+<dataset>
+<name>imglab dataset</name>
+<comment>Created by imglab tool.</comment>
+<images>
+  <image file='/home/duongthanh3327/CuocDuaSo/traffic_sign/sign-giving-order-stop-give-way.jpg'>
+  	<box top='0' left='0' width='420' height='420'>
+      <label>stop-give-way</label>
+    </box>
+  </image>
+</images>
+</dataset>

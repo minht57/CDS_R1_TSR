@@ -1,0 +1,1055 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<?xml-stylesheet type='text/xsl' href='image_metadata_stylesheet.xsl'?>
+<dataset>
+<name>imglab dataset</name>
+<comment>Created by imglab tool.</comment>
+<images>
+  <image file='turn-right-ahead/101_393.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_394.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_395.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_396.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_397.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_398.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_399.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_400.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_401.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_402.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_403.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_404.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_405.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_406.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_407.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_408.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_409.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_410.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_411.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_412.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_413.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_414.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_415.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_416.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_417.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_418.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_419.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_420.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_421.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_422.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_423.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_424.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_425.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_426.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_427.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_428.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_429.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_430.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_431.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_432.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_433.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_434.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_435.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_436.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_437.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_438.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_439.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_440.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_441.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_442.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_443.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_444.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_445.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_446.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_447.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_448.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_449.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_450.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_451.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_452.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_453.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_454.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_455.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_456.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_457.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_458.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_459.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_460.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_461.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_462.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_463.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_464.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_465.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_466.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_467.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_468.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_469.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_470.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_471.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_472.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_473.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_474.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_475.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_476.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_477.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_478.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_479.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_480.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_481.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_482.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_483.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_484.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_485.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_486.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_487.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_488.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_489.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_490.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_491.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_492.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_493.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_494.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_495.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_496.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_497.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_498.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_499.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_500.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_501.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_502.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_503.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_504.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_505.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_506.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_507.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_508.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_509.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_510.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_511.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_512.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_513.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_514.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_515.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_516.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_517.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_518.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_519.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_520.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_521.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_522.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_523.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/101_524.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_0.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_100.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_101.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_102.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_103.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_104.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_105.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_106.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_107.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_108.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_109.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_10.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_110.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_111.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_112.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_113.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_114.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_115.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_116.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_117.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_118.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_119.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_11.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_120.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_121.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_122.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_123.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_124.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_125.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_126.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_127.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_128.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_129.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_12.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_130.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_131.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_132.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_133.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_134.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_135.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_136.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_137.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_138.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_139.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_13.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_140.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_141.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_142.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_143.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_144.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_145.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_146.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_147.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_148.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_149.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_14.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_150.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_151.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_152.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_153.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_154.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_155.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_156.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_157.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_158.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_159.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_15.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_160.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_161.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_162.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_163.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_164.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_165.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_166.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_167.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_168.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_169.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_16.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_170.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_171.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_172.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_173.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_174.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_175.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_176.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_177.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_178.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_179.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_17.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_180.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_181.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_182.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_183.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_184.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_185.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_186.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_187.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_188.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_189.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_18.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_190.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_191.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_192.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_193.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_194.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_195.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_196.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_197.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_198.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_199.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_19.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_1.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_200.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_201.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_202.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_203.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_204.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_205.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_206.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_207.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_208.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_209.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_20.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_210.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_211.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_212.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_213.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_214.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_215.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_216.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_21.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_22.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_23.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_24.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_25.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_26.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_27.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_28.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_29.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_2.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_30.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_31.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_32.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_33.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_34.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_35.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_36.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_37.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_38.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_39.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_3.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_40.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_41.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_42.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_43.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_44.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_45.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_46.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_47.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_48.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_49.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_4.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_50.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_51.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_52.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_53.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_54.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_55.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_56.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_57.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_58.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_59.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_5.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_60.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_61.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_62.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_63.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_64.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_65.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_66.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_67.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_68.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_69.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_6.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_70.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_71.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_72.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_73.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_74.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_75.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_76.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_77.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_78.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_79.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_7.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_80.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_81.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_82.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_83.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_84.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_85.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_86.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_87.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_88.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_89.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_8.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_90.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_91.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_92.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_93.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_94.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_95.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_96.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_97.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_98.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_99.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='turn-right-ahead/102_9.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+</images>
+</dataset>

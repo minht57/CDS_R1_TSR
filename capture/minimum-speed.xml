@@ -1,0 +1,440 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<?xml-stylesheet type='text/xsl' href='image_metadata_stylesheet.xsl'?>
+<dataset>
+<name>imglab dataset</name>
+<comment>Created by imglab tool.</comment>
+<images>
+  <image file='minimum-speed/101_236.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_237.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_238.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_239.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_240.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_241.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_242.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_243.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_244.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_245.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_246.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_247.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_248.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_249.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_250.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_251.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_252.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_253.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_254.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_255.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_256.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_257.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_258.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_259.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_260.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_261.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_262.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_263.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_264.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_265.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_266.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_267.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_268.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_269.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_270.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_271.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_272.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_273.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_274.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_275.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_276.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_277.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_278.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_279.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_280.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_281.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_282.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_283.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_284.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_285.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_286.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_287.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_288.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_289.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_290.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_291.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_292.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_293.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_294.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_295.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_296.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_297.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_298.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_299.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_300.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_301.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_302.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_303.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_304.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_305.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_306.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_307.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_308.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_309.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_310.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_311.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_312.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_313.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_314.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_315.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_316.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_317.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_318.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_319.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_320.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_321.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_322.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_323.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_324.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_325.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_326.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_327.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_328.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_329.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_330.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_331.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_332.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_333.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_334.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_335.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_336.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_337.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_338.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_339.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_340.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_341.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_342.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_343.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_344.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_345.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_346.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_347.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_348.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_349.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_350.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_351.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_352.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_353.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_354.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_355.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_356.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_357.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_358.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_359.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_360.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_361.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_362.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_363.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_364.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_365.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_366.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_367.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_368.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_369.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_370.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_371.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_372.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_373.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_374.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_375.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_376.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_377.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_378.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+  <image file='minimum-speed/101_379.jpg'>
+  <box top='0' left='0' width='79' height='79'/>
+    </image>
+</images>
+</dataset>

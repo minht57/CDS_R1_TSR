@@ -70,7 +70,9 @@ RNG rng(12345);
 
 bool bpause = false;
 bool capture = false;
+
 int ccpt = 0;
+int croi = 0;
 
 VideoWriter video;
 	// Scalar red_min  = Scalar(0,36,0);
@@ -95,6 +97,7 @@ void CallBackFunc(int event, int x, int y, int flags, void* userdata)
 		capture = true;
 	}
 }
+
 
 int main(int argc, char** argv)
 {
@@ -148,33 +151,76 @@ int main(int argc, char** argv)
 
 	}
 	if(parser.option("s"))	
-		video.open(string(parser[1])+"_video.avi",CV_FOURCC('M','J','P','G'),60, Size(640, 480), 1); 
+		video.open(string(parser[1])+"_video.avi",CV_FOURCC('M','J','P','G'),10, Size(640, 480), 1); 
+
+    typedef scan_fhog_pyramid<pyramid_down<6> > image_scanner_type;
+    std::vector<object_detector<image_scanner_type> > detectors;
 
 	cout << "Loading SVM detectors..." << endl;
 	std::vector<TrafficSign> signs;
 
-	signs.push_back(TrafficSign("object_detector", "svm_detectors/object_detector.svm", rgb_pixel(0,0,255)));
+	signs.push_back(TrafficSign("maximum-speed", "svm_detectors/maximum-speed.svm", rgb_pixel(0,0,255)));
 
-	signs.push_back(TrafficSign("oneway-exit", "resources/detectors/oneway-exit-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
+    signs.push_back(TrafficSign("minimum-speed", "svm_detectors/minimum-speed.svm", rgb_pixel(0,0,255)));
 
-	signs.push_back(TrafficSign("crossing", "resources/detectors/crossing-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
+    signs.push_back(TrafficSign("minimum-speed-end", "svm_detectors/minimum-speed-end.svm", rgb_pixel(0,0,255)));
 
-	signs.push_back(TrafficSign("give-way", "resources/detectors/give-way-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
+    // signs.push_back(TrafficSign("national-speed-limit", "svm_detectors/national-speed-limit.svm", rgb_pixel(0,0,255)));
 
-	signs.push_back(TrafficSign("main", "resources/detectors/main-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
+    signs.push_back(TrafficSign("no-entry", "svm_detectors/no-entry.svm", rgb_pixel(0,0,255)));
 
-	signs.push_back(TrafficSign("parking", "resources/detectors/parking-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
+    signs.push_back(TrafficSign("no-left-turn", "svm_detectors/no-left-turn.svm", rgb_pixel(0,0,255)));
 
-	signs.push_back(TrafficSign("stop", "resources/detectors/stop-detector.svm", rgb_pixel(rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255))));
+    // signs.push_back(TrafficSign("no-right-turn", "svm_detectors/no-right-turn.svm", rgb_pixel(0,0,255)));
 
-	typedef scan_fhog_pyramid<pyramid_down<6> > image_scanner_type;
-	std::vector<object_detector<image_scanner_type> > detectors;
+    signs.push_back(TrafficSign("stop-give-way", "svm_detectors/stop-give-way.svm", rgb_pixel(0,0,255)));
+
+    signs.push_back(TrafficSign("turn-left-ahead", "svm_detectors/turn-left-ahead.svm", rgb_pixel(0,0,255)));
+
+    signs.push_back(TrafficSign("turn-right-ahead", "svm_detectors/turn-right-ahead.svm", rgb_pixel(0,0,255)));
 
 	for (int i = 0; i < signs.size(); i++) {
 		object_detector<image_scanner_type> detector;
 		deserialize(signs[i].svm_path) >> detector;
 		detectors.push_back(detector);
 	}
+
+
+	cout << "Loading Template images..." << endl;
+
+    std::vector<Mat> tmp_img;
+
+    Mat max_spd = imread("template/0.jpg");
+    // resize(max_spd,max_spd,Size(80,80),INTER_LINEAR);
+    tmp_img.push_back(max_spd);
+
+    Mat min_spd = imread("template/2.jpg");
+    // resize(min_spd,min_spd,Size(80,80),INTER_LINEAR);
+    tmp_img.push_back(min_spd);
+
+    Mat min_end = imread("template/1.jpg");
+    // resize(min_end,min_end,Size(80,80),INTER_LINEAR);
+    tmp_img.push_back(min_end);
+
+    Mat no_ent = imread("template/4.jpg");
+    // resize(no_ent,no_ent,Size(80,80),INTER_LINEAR);
+    tmp_img.push_back(no_ent);
+
+    Mat no_left = imread("template/5.jpg");
+    // resize(no_left,no_left,Size(80,80),INTER_LINEAR);
+    tmp_img.push_back(no_left);
+
+    Mat stp_ga = imread("template/7.jpg");
+    // resize(stp_ga,stp_ga,Size(80,80),INTER_LINEAR);
+    tmp_img.push_back(stp_ga);
+
+    Mat trn_left = imread("template/8.jpg");
+    // resize(trn_left,trn_left,Size(80,80),INTER_LINEAR);
+    tmp_img.push_back(trn_left);
+
+    Mat trn_right = imread("template/9.jpg");
+    // resize(trn_right,trn_right,Size(80,80),INTER_LINEAR);
+    tmp_img.push_back(trn_right);
 
 	namedWindow( nameWindow6 , WINDOW_NORMAL );
 	setMouseCallback(nameWindow6, CallBackFunc, NULL);
@@ -184,6 +230,8 @@ int main(int argc, char** argv)
 		double t = (double)getTickCount();
 
 		Mat img_HSV, img_result, maskr, maskr1, maskr2, maskb, maskk, edged;
+
+		std::vector<char> save_template;
 
 		if(parser.option("v"))
 		{
@@ -201,7 +249,6 @@ int main(int argc, char** argv)
 				ccpt++;
 				capture = false;
 			}
-
 		}
 		if (img_raw.empty())
 		{
@@ -219,6 +266,7 @@ int main(int argc, char** argv)
 			cout << "*	* Total frame:		" << cnt+1 << "		*	*" <<endl;
 			cout << "*	* Frame size:		" << (int)vid.get(CV_CAP_PROP_FRAME_WIDTH) <<"x" << (int)vid.get(CAP_PROP_FRAME_HEIGHT) << "		*	*" <<endl;
 			cout << "*	* FPS:			" << setprecision(2) << (double)cnt/ttime << "		*	*" <<endl;
+            cout << "*	* Number of ROI:	" << croi << "		*	*" <<endl;
 			cout <<	"*********************************************************" <<	endl <<	endl;
 			cout << "Video end" << endl;
 			break;
@@ -236,7 +284,7 @@ int main(int argc, char** argv)
 		inRange(img_HSV, Scalar(K_H_val, K_S_val, K_V_val), Scalar(K_H_max, K_S_max, K_V_max), maskk);
 		edged = maskr1 + maskr2 + maskb;
 
-		imshow("Black threshold", maskk);
+		// imshow("Black threshold", maskk);
 		Mat kernel = (Mat_<float>(3,3) <<
 			1,  1, 1,
 			1, -8, 1,
@@ -275,12 +323,12 @@ int main(int argc, char** argv)
         		{
         			if ( ( (float)boundRect[idx].width/boundRect[idx].height > 0.5) && ( (float)boundRect[idx].width/boundRect[idx].height < 1.3 ) )
         			{
-        				drawContours( drawing, contours, idx, 255, CV_FILLED, 8, hierarchy );
+        				drawContours( imgLaplacian, contours, idx, 255, CV_FILLED, 8, hierarchy );
         			// imshow("drawing" + to_string(idx), drawing);
 
-        				Mat crp_drw = drawing(boundRect[idx]).clone();
+        				Mat crp_drw = imgLaplacian(boundRect[idx]).clone();
         				Mat src = img_raw(boundRect[idx]).clone();
-
+                        // FindBoundingline(src, crp_drw, detectors, boundRect[idx], Scalar(255,255,0), img_result);
         				int linewidth = 2;
         				Scalar value;
         				value = Scalar(0, 0, 0);
@@ -299,8 +347,8 @@ int main(int argc, char** argv)
         				// imshow("Dist" + to_string(idx), dist);
         			// namedWindow("drawing" + to_string(idx),WINDOW_NORMAL);
         			// namedWindow("Dist",WINDOW_NORMAL);
-        			// imshow("drawing" + to_string(idx), crp_drw);
-        			// imshow("Dist" + to_string(idx), dist);
+        			// imshow("drawing", crp_drw);
+        			// imshow("Dist", dist);
 
         				Mat dist_bw;
         				threshold(dist, dist_bw, .4, 1., CV_THRESH_BINARY);
@@ -317,7 +365,7 @@ int main(int argc, char** argv)
         				findContours(dist_8u, contoursm, hierarchym, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
 
         				Mat markers = Mat::zeros(dist.size(), CV_32SC1);
-                        
+
         				for(int isx = 0; isx < contoursm.size(); isx++) {
         					drawContours(markers, contoursm, static_cast<int>(isx), Scalar::all(static_cast<int>(isx)+1), -1);	
         				}
@@ -380,23 +428,44 @@ int main(int argc, char** argv)
         									Rect dstbound (boundRectw[iw].tl().x + boundRect[idx].tl().x - 2, boundRectw[iw].tl().y + boundRect[idx].tl().y - 2,boundRectw[iw].width, boundRectw[iw].height);
         								// cv::rectangle( img_result, dstbound, Scalar(0,255,0), 2, 8, 0 );       						
         									Mat image_roi = img_result(dstbound);
-        									cv_image<bgr_pixel> images_HOG(image_roi);
-        									std::vector<rect_detection> rects;
+
+                                        
+                                            resize(image_roi,image_roi,Size(80,80),INTER_LANCZOS4);
+                                        // imshow("ROI",image_roi);
+                                        croi++;
+                                        // imwrite( "capture/"+ string(parser[1]) + "_" + to_string(ccpt++) + ".jpg" , image_roi );
+                                            cv_image<bgr_pixel> images_HOG(image_roi);
+                                            std::vector<rect_detection> rects;
         								// cout << to_string(idx) << " "  << boundRectw[iw].tl() << endl;
-        									evaluate_detectors(detectors, images_HOG, rects);
-        									if(rects.size() > 0)
-        										cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(255,0,0), 2, 8, 0 );
-        									else cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(0,255,0), 2, 8, 0 );
-        								}
+
+
+                                            evaluate_detectors(detectors, images_HOG, rects, 0.9);
+
+                                            if(rects.size() > 0)
+                                            {
+                                                cout << "   " << cnt << ":  " << signs[rects[0].weight_index].name <<": " << rects[0].detection_confidence << endl;
+                                                cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(255,0,0), 2, 8, 0 );
+                                                putText(img_result, signs[rects[0].weight_index].name, Point(dstbound.br().x, dstbound.tl().y), FONT_HERSHEY_COMPLEX, 0.5, Scalar(0,0,255), 1, CV_AA);
+                                                save_template.push_back(rects[0].weight_index);
+                                                
+                                            }
+                                            else cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(0,255,0), 2, 8, 0 );
+                                            // waitKey(0);
+                                        }
         							}
         						}
         					}
         				}
-        			}
-        		}
-        	}
+                    }
+                }
+            }
         }
 
+        for (int icout = 0; icout < save_template.size();icout++)
+        {
+        	tmp_img[save_template[icout]].copyTo(img_result(Rect(80*icout,400,tmp_img[save_template[icout]].cols,tmp_img[save_template[icout]].rows)));
+        }
+        /*
         std::vector<std::vector<cv::Point> > contoursk;
         std::vector<Vec4i> hierarchyk;
 
@@ -418,9 +487,7 @@ int main(int argc, char** argv)
                     cv::rectangle( img_result, boundRectk[idx].tl(), boundRectk[idx].br(), Scalar(0,0,255), 2, 8, 0 );
                 }
             }
-            
-
-        }
+        }*/
 
         namedWindow( nameWindow6 , WINDOW_NORMAL );
         imshow(nameWindow6,img_result);
