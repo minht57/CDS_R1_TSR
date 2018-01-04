@@ -779,7 +779,7 @@ CMakeFiles/tsr.dir/src/tsr.cpp.o
  ../dlib/dlib/../dlib/xml_parser/xml_parser_kernel_1.h
  ../dlib/dlib/../dlib/xml_parser/xml_parser_kernel_abstract.h
  ../dlib/dlib/../dlib/xml_parser/xml_parser_kernel_interfaces.h
- /home/duongthanh3327/CuocDuaSo/tsr/src/tsr.cpp
+ /home/justuny/Documents/CDS2018/CDS_R1_TSR/src/tsr.cpp
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
@@ -905,3 +905,6 @@ CMakeFiles/tsr.dir/src/tsr.cpp.o
  /usr/local/include/opencv2/viz/viz3d.hpp
  /usr/local/include/opencv2/viz/vizcore.hpp
  /usr/local/include/opencv2/viz/widgets.hpp
+ /usr/local/include/opencv2/xfeatures2d.hpp
+ /usr/local/include/opencv2/xfeatures2d/cuda.hpp
+ /usr/local/include/opencv2/xfeatures2d/nonfree.hpp

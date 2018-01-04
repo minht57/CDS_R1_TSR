@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/duongthanh3327/CuocDuaSo/tsr
+CMAKE_SOURCE_DIR = /home/justuny/Documents/CDS2018/CDS_R1_TSR
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/duongthanh3327/CuocDuaSo/tsr/build
+CMAKE_BINARY_DIR = /home/justuny/Documents/CDS2018/CDS_R1_TSR/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/duongthanh3327/CuocDuaSo/tsr/build/CMakeFiles /home/duongthanh3327/CuocDuaSo/tsr/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/justuny/Documents/CDS2018/CDS_R1_TSR/build/CMakeFiles /home/justuny/Documents/CDS2018/CDS_R1_TSR/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/duongthanh3327/CuocDuaSo/tsr/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/justuny/Documents/CDS2018/CDS_R1_TSR/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -137,6 +137,19 @@ tsr/fast:
 .PHONY : tsr/fast
 
 #=============================================================================
+# Target rules for targets named view_hog
+
+# Build rule for target.
+view_hog: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 view_hog
+.PHONY : view_hog
+
+# fast build rule for target.
+view_hog/fast:
+	$(MAKE) -f CMakeFiles/view_hog.dir/build.make CMakeFiles/view_hog.dir/build
+.PHONY : view_hog/fast
+
+#=============================================================================
 # Target rules for targets named hog_detector
 
 # Build rule for target.
@@ -150,17 +163,17 @@ hog_detector/fast:
 .PHONY : hog_detector/fast
 
 #=============================================================================
-# Target rules for targets named view_hog
+# Target rules for targets named tsr_uy
 
 # Build rule for target.
-view_hog: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 view_hog
-.PHONY : view_hog
+tsr_uy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tsr_uy
+.PHONY : tsr_uy
 
 # fast build rule for target.
-view_hog/fast:
-	$(MAKE) -f CMakeFiles/view_hog.dir/build.make CMakeFiles/view_hog.dir/build
-.PHONY : view_hog/fast
+tsr_uy/fast:
+	$(MAKE) -f CMakeFiles/tsr_uy.dir/build.make CMakeFiles/tsr_uy.dir/build
+.PHONY : tsr_uy/fast
 
 #=============================================================================
 # Target rules for targets named train_object_detector
@@ -336,6 +349,33 @@ src/tsr.cpp.s:
 	$(MAKE) -f CMakeFiles/tsr.dir/build.make CMakeFiles/tsr.dir/src/tsr.cpp.s
 .PHONY : src/tsr.cpp.s
 
+src/tsr_uy.o: src/tsr_uy.cpp.o
+
+.PHONY : src/tsr_uy.o
+
+# target to build an object file
+src/tsr_uy.cpp.o:
+	$(MAKE) -f CMakeFiles/tsr_uy.dir/build.make CMakeFiles/tsr_uy.dir/src/tsr_uy.cpp.o
+.PHONY : src/tsr_uy.cpp.o
+
+src/tsr_uy.i: src/tsr_uy.cpp.i
+
+.PHONY : src/tsr_uy.i
+
+# target to preprocess a source file
+src/tsr_uy.cpp.i:
+	$(MAKE) -f CMakeFiles/tsr_uy.dir/build.make CMakeFiles/tsr_uy.dir/src/tsr_uy.cpp.i
+.PHONY : src/tsr_uy.cpp.i
+
+src/tsr_uy.s: src/tsr_uy.cpp.s
+
+.PHONY : src/tsr_uy.s
+
+# target to generate assembly for a file
+src/tsr_uy.cpp.s:
+	$(MAKE) -f CMakeFiles/tsr_uy.dir/build.make CMakeFiles/tsr_uy.dir/src/tsr_uy.cpp.s
+.PHONY : src/tsr_uy.cpp.s
+
 src/view_hog.o: src/view_hog.cpp.o
 
 .PHONY : src/view_hog.o
@@ -372,9 +412,10 @@ help:
 	@echo "... calib"
 	@echo "... rebuild_cache"
 	@echo "... tsr"
-	@echo "... hog_detector"
 	@echo "... edit_cache"
 	@echo "... view_hog"
+	@echo "... hog_detector"
+	@echo "... tsr_uy"
 	@echo "... train_object_detector"
 	@echo "... detect"
 	@echo "... dlib"
@@ -393,6 +434,9 @@ help:
 	@echo "... src/tsr.o"
 	@echo "... src/tsr.i"
 	@echo "... src/tsr.s"
+	@echo "... src/tsr_uy.o"
+	@echo "... src/tsr_uy.i"
+	@echo "... src/tsr_uy.s"
 	@echo "... src/view_hog.o"
 	@echo "... src/view_hog.i"
 	@echo "... src/view_hog.s"

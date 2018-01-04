@@ -606,11 +606,11 @@ fstream
 platform.h
 ../dlib/dlib/../dlib/platform.h
 
-/home/duongthanh3327/CuocDuaSo/tsr/src/calib.cpp
+/home/justuny/Documents/CDS2018/CDS_R1_TSR/src/calib.cpp
 dlib/cmd_line_parser.h
 -
 opencv2/imgcodecs.hpp
-/home/duongthanh3327/CuocDuaSo/tsr/src/opencv2/imgcodecs.hpp
+/home/justuny/Documents/CDS2018/CDS_R1_TSR/src/opencv2/imgcodecs.hpp
 opencv2/highgui/highgui.hpp
 -
 opencv2/imgproc/imgproc.hpp
@@ -1899,4 +1899,18 @@ opencv2/viz/viz3d.hpp
 /usr/local/include/opencv2/viz/widgets.hpp
 opencv2/viz/types.hpp
 -
+
+/usr/local/include/opencv2/xfeatures2d.hpp
+opencv2/features2d.hpp
+/usr/local/include/opencv2/opencv2/features2d.hpp
+opencv2/xfeatures2d/nonfree.hpp
+/usr/local/include/opencv2/opencv2/xfeatures2d/nonfree.hpp
+
+/usr/local/include/opencv2/xfeatures2d/cuda.hpp
+opencv2/core/cuda.hpp
+/usr/local/include/opencv2/xfeatures2d/opencv2/core/cuda.hpp
+
+/usr/local/include/opencv2/xfeatures2d/nonfree.hpp
+opencv2/features2d.hpp
+/usr/local/include/opencv2/xfeatures2d/opencv2/features2d.hpp
 

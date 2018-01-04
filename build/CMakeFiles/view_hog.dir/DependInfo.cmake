@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/duongthanh3327/CuocDuaSo/tsr/src/view_hog.cpp" "/home/duongthanh3327/CuocDuaSo/tsr/build/CMakeFiles/view_hog.dir/src/view_hog.cpp.o"
+  "/home/justuny/Documents/CDS2018/CDS_R1_TSR/src/view_hog.cpp" "/home/justuny/Documents/CDS2018/CDS_R1_TSR/build/CMakeFiles/view_hog.dir/src/view_hog.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/duongthanh3327/CuocDuaSo/tsr/build/dlib_build/CMakeFiles/dlib.dir/DependInfo.cmake"
+  "/home/justuny/Documents/CDS2018/CDS_R1_TSR/build/dlib_build/CMakeFiles/dlib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

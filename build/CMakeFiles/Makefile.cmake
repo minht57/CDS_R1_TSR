@@ -68,8 +68,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/calib.dir/DependInfo.cmake"
   "CMakeFiles/tsr.dir/DependInfo.cmake"
-  "CMakeFiles/hog_detector.dir/DependInfo.cmake"
   "CMakeFiles/view_hog.dir/DependInfo.cmake"
+  "CMakeFiles/hog_detector.dir/DependInfo.cmake"
+  "CMakeFiles/tsr_uy.dir/DependInfo.cmake"
   "CMakeFiles/train_object_detector.dir/DependInfo.cmake"
   "CMakeFiles/detect.dir/DependInfo.cmake"
   "dlib_build/CMakeFiles/dlib.dir/DependInfo.cmake"

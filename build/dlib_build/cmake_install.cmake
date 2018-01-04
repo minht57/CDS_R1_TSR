@@ -1,4 +1,4 @@
-# Install script for directory: /home/duongthanh3327/CuocDuaSo/tsr/dlib/dlib
+# Install script for directory: /home/justuny/Documents/CDS2018/CDS_R1_TSR/dlib/dlib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

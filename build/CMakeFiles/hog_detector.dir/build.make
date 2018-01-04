@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/duongthanh3327/CuocDuaSo/tsr
+CMAKE_SOURCE_DIR = /home/justuny/Documents/CDS2018/CDS_R1_TSR
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/duongthanh3327/CuocDuaSo/tsr/build
+CMAKE_BINARY_DIR = /home/justuny/Documents/CDS2018/CDS_R1_TSR/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hog_detector.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/hog_detector.dir/flags.make
 
 CMakeFiles/hog_detector.dir/src/hog_detector.cpp.o: CMakeFiles/hog_detector.dir/flags.make
 CMakeFiles/hog_detector.dir/src/hog_detector.cpp.o: ../src/hog_detector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duongthanh3327/CuocDuaSo/tsr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hog_detector.dir/src/hog_detector.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hog_detector.dir/src/hog_detector.cpp.o -c /home/duongthanh3327/CuocDuaSo/tsr/src/hog_detector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/justuny/Documents/CDS2018/CDS_R1_TSR/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hog_detector.dir/src/hog_detector.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hog_detector.dir/src/hog_detector.cpp.o -c /home/justuny/Documents/CDS2018/CDS_R1_TSR/src/hog_detector.cpp
 
 CMakeFiles/hog_detector.dir/src/hog_detector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hog_detector.dir/src/hog_detector.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duongthanh3327/CuocDuaSo/tsr/src/hog_detector.cpp > CMakeFiles/hog_detector.dir/src/hog_detector.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/justuny/Documents/CDS2018/CDS_R1_TSR/src/hog_detector.cpp > CMakeFiles/hog_detector.dir/src/hog_detector.cpp.i
 
 CMakeFiles/hog_detector.dir/src/hog_detector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hog_detector.dir/src/hog_detector.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duongthanh3327/CuocDuaSo/tsr/src/hog_detector.cpp -o CMakeFiles/hog_detector.dir/src/hog_detector.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/justuny/Documents/CDS2018/CDS_R1_TSR/src/hog_detector.cpp -o CMakeFiles/hog_detector.dir/src/hog_detector.cpp.s
 
 CMakeFiles/hog_detector.dir/src/hog_detector.cpp.o.requires:
 
@@ -91,11 +91,29 @@ hog_detector_EXTERNAL_OBJECTS =
 hog_detector: CMakeFiles/hog_detector.dir/src/hog_detector.cpp.o
 hog_detector: CMakeFiles/hog_detector.dir/build.make
 hog_detector: dlib_build/libdlib.a
-hog_detector: /usr/local/lib/libopencv_shape.so.3.2.0
 hog_detector: /usr/local/lib/libopencv_stitching.so.3.2.0
 hog_detector: /usr/local/lib/libopencv_superres.so.3.2.0
 hog_detector: /usr/local/lib/libopencv_videostab.so.3.2.0
-hog_detector: /usr/local/lib/libopencv_viz.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_aruco.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_bgsegm.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_bioinspired.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_ccalib.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_dpm.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_freetype.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_fuzzy.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_hdf.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_line_descriptor.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_optflow.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_reg.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_saliency.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_stereo.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_structured_light.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_surface_matching.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_tracking.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_xfeatures2d.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_ximgproc.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_xobjdetect.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_xphoto.so.3.2.0
 hog_detector: /usr/lib/x86_64-linux-gnu/libnsl.so
 hog_detector: /usr/lib/x86_64-linux-gnu/libSM.so
 hog_detector: /usr/lib/x86_64-linux-gnu/libICE.so
@@ -104,20 +122,29 @@ hog_detector: /usr/lib/x86_64-linux-gnu/libXext.so
 hog_detector: /usr/lib/x86_64-linux-gnu/libpng.so
 hog_detector: /usr/lib/x86_64-linux-gnu/libz.so
 hog_detector: /usr/lib/x86_64-linux-gnu/libjpeg.so
-hog_detector: /usr/local/lib/libopencv_objdetect.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_shape.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_viz.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_phase_unwrapping.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_rgbd.so.3.2.0
 hog_detector: /usr/local/lib/libopencv_calib3d.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_video.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_datasets.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_dnn.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_face.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_plot.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_text.so.3.2.0
 hog_detector: /usr/local/lib/libopencv_features2d.so.3.2.0
 hog_detector: /usr/local/lib/libopencv_flann.so.3.2.0
-hog_detector: /usr/local/lib/libopencv_highgui.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_objdetect.so.3.2.0
 hog_detector: /usr/local/lib/libopencv_ml.so.3.2.0
+hog_detector: /usr/local/lib/libopencv_highgui.so.3.2.0
 hog_detector: /usr/local/lib/libopencv_photo.so.3.2.0
-hog_detector: /usr/local/lib/libopencv_video.so.3.2.0
 hog_detector: /usr/local/lib/libopencv_videoio.so.3.2.0
 hog_detector: /usr/local/lib/libopencv_imgcodecs.so.3.2.0
 hog_detector: /usr/local/lib/libopencv_imgproc.so.3.2.0
 hog_detector: /usr/local/lib/libopencv_core.so.3.2.0
 hog_detector: CMakeFiles/hog_detector.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/duongthanh3327/CuocDuaSo/tsr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable hog_detector"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/justuny/Documents/CDS2018/CDS_R1_TSR/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable hog_detector"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hog_detector.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -134,6 +161,6 @@ CMakeFiles/hog_detector.dir/clean:
 .PHONY : CMakeFiles/hog_detector.dir/clean
 
 CMakeFiles/hog_detector.dir/depend:
-	cd /home/duongthanh3327/CuocDuaSo/tsr/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/duongthanh3327/CuocDuaSo/tsr /home/duongthanh3327/CuocDuaSo/tsr /home/duongthanh3327/CuocDuaSo/tsr/build /home/duongthanh3327/CuocDuaSo/tsr/build /home/duongthanh3327/CuocDuaSo/tsr/build/CMakeFiles/hog_detector.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/justuny/Documents/CDS2018/CDS_R1_TSR/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/justuny/Documents/CDS2018/CDS_R1_TSR /home/justuny/Documents/CDS2018/CDS_R1_TSR /home/justuny/Documents/CDS2018/CDS_R1_TSR/build /home/justuny/Documents/CDS2018/CDS_R1_TSR/build /home/justuny/Documents/CDS2018/CDS_R1_TSR/build/CMakeFiles/hog_detector.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hog_detector.dir/depend
 

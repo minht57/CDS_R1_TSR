@@ -904,4 +904,7 @@ CMakeFiles/tsr.dir/src/tsr.cpp.o: /usr/local/include/opencv2/viz/types.hpp
 CMakeFiles/tsr.dir/src/tsr.cpp.o: /usr/local/include/opencv2/viz/viz3d.hpp
 CMakeFiles/tsr.dir/src/tsr.cpp.o: /usr/local/include/opencv2/viz/vizcore.hpp
 CMakeFiles/tsr.dir/src/tsr.cpp.o: /usr/local/include/opencv2/viz/widgets.hpp
+CMakeFiles/tsr.dir/src/tsr.cpp.o: /usr/local/include/opencv2/xfeatures2d.hpp
+CMakeFiles/tsr.dir/src/tsr.cpp.o: /usr/local/include/opencv2/xfeatures2d/cuda.hpp
+CMakeFiles/tsr.dir/src/tsr.cpp.o: /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
 
