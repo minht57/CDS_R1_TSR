@@ -562,7 +562,7 @@ int main(int argc, char** argv)
         									Mat image_draw = dst(rb);//remove border (added before watershed)
 
         									imshow("image_draw", image_draw);
-        									
+
         									Mat image_roi2 = image_draw.clone();
 
         									Size size2(80,80);
@@ -611,22 +611,26 @@ int main(int argc, char** argv)
         									CalcPercent(Result2, Result1, kernel_square, &percent_square);
                     
                     // cout <<"Circle " << percent_circle << "\t Triangle " << percent_trianle << " \t Square " << percent_square << endl;
-
+        									int shape_index = 0;
         									if((percent_circle > 0.8) && (percent_trianle > 0.8) && (percent_square > 0.8))
         									{
         										cout << cnt << "\t Vuong\t" << percent_square << endl;
+        										shape_index = 1;
         									}
         									else if (percent_circle > 0.8)
         									{
         										cout << cnt << "\t Tron\t" << percent_circle << endl;
+        										shape_index = 2;
         									}
         									else if (percent_trianle > 0.8)
         									{
         										cout << cnt << "\t Tam giac xuoi\t" << percent_trianle << endl;
+        										shape_index = 3;
         									}
         									else if (percent_trianle2 > 0.8)
         									{
         										cout << cnt << "\t Tam giac nguoc\t" << percent_trianle2 << endl;
+        										shape_index = 4;
         									}
         									else
         									{
@@ -649,11 +653,19 @@ int main(int argc, char** argv)
 
         									if(rects.size() > 0)
         									{
-        										cout << "   				" << signs[rects[0].weight_index].name <<": " << rects[0].detection_confidence << endl;
-        										cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(255,0,0), 2, 8, 0 );
-        										putText(img_result, signs[rects[0].weight_index].name, Point(dstbound.br().x, dstbound.tl().y), FONT_HERSHEY_COMPLEX, 0.5, Scalar(0,0,255), 1, CV_AA);
-        										save_template.push_back(rects[0].weight_index);
-
+        										cout << rects[0].weight_index << endl;
+        										if 	(	((rects[0].weight_index < 8) && (shape_index == 2)) ||
+        												((rects[0].weight_index >= 8) && (rects[0].weight_index < 10) && (shape_index == 1)) ||
+        												((rects[0].weight_index >= 10) && (rects[0].weight_index < 15) && (shape_index == 3)) ||
+        												((rects[0].weight_index >= 15) && (rects[0].weight_index < 20) && (shape_index == 4))
+        											)
+        										{
+	        										cout << "   				" << signs[rects[0].weight_index].name <<": " << rects[0].detection_confidence << endl;
+	        										cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(255,0,0), 2, 8, 0 );
+	        										putText(img_result, signs[rects[0].weight_index].name, Point(dstbound.br().x, dstbound.tl().y), FONT_HERSHEY_COMPLEX, 0.5, Scalar(0,0,255), 1, CV_AA);
+	        										save_template.push_back(rects[0].weight_index);
+        										}
+        										else cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(0,255,0), 2, 8, 0 );
         									}
         									else cv::rectangle( img_result, dstbound.tl(), dstbound.br(), Scalar(0,255,0), 2, 8, 0 );
                                             // waitKey(0);
