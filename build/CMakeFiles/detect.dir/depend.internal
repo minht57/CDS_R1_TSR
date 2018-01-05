@@ -779,7 +779,7 @@ CMakeFiles/detect.dir/src/detect.cpp.o
  ../dlib/dlib/../dlib/xml_parser/xml_parser_kernel_1.h
  ../dlib/dlib/../dlib/xml_parser/xml_parser_kernel_abstract.h
  ../dlib/dlib/../dlib/xml_parser/xml_parser_kernel_interfaces.h
- /home/justuny/Documents/CDS2018/CDS_R1_TSR/src/detect.cpp
+ /home/ltadl/CDS/CDS_R1_TSR/src/detect.cpp
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
  /usr/local/include/opencv2/calib3d/calib3d_c.h

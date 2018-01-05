@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG   -DDLIB_JPEG_SUPPORT -DDLIB_PNG_SUPPORT -Wreturn-type 
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/justuny/Documents/CDS2018/CDS_R1_TSR/dlib/dlib/.. -isystem /usr/local/include -isystem /usr/local/include/opencv 
+CXX_INCLUDES = -I/home/ltadl/CDS/CDS_R1_TSR/dlib/dlib/.. -isystem /usr/local/include -isystem /usr/local/include/opencv 
 

@@ -774,4 +774,4 @@ CMakeFiles/train_object_detector.dir/src/train_object_detector.cpp.o
  ../dlib/dlib/../dlib/xml_parser/xml_parser_kernel_1.h
  ../dlib/dlib/../dlib/xml_parser/xml_parser_kernel_abstract.h
  ../dlib/dlib/../dlib/xml_parser/xml_parser_kernel_interfaces.h
- /home/justuny/Documents/CDS2018/CDS_R1_TSR/src/train_object_detector.cpp
+ /home/ltadl/CDS/CDS_R1_TSR/src/train_object_detector.cpp

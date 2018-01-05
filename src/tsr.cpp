@@ -150,6 +150,7 @@ int main(int argc, char** argv)
 		}
 
 	}
+	
 	if(parser.option("s"))	
 		video.open(string(parser[1])+"_video.avi",CV_FOURCC('M','J','P','G'),10, Size(640, 480), 1); 
 
@@ -239,7 +240,7 @@ int main(int argc, char** argv)
 			{
 				vid >> img_raw;
 				if(parser.option("s"))
-					video.write(img_raw);
+					video.write(img_result);
 				cnt++;
 			}
 			if (capture)
@@ -433,7 +434,7 @@ int main(int argc, char** argv)
                                             resize(image_roi,image_roi,Size(80,80),INTER_LANCZOS4);
                                         // imshow("ROI",image_roi);
                                         croi++;
-                                        // imwrite( "capture/"+ string(parser[1]) + "_" + to_string(ccpt++) + ".jpg" , image_roi );
+                                        imwrite( "capture/"+ string(parser[1]) + "_" + to_string(ccpt++) + ".jpg" , image_roi );
                                             cv_image<bgr_pixel> images_HOG(image_roi);
                                             std::vector<rect_detection> rects;
         								// cout << to_string(idx) << " "  << boundRectw[iw].tl() << endl;

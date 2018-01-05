@@ -8576,7 +8576,7 @@ string
 ../error.h
 ../dlib/dlib/../dlib/error.h
 
-/home/justuny/Documents/CDS2018/CDS_R1_TSR/src/tsr_uy.cpp
+/home/ltadl/CDS/CDS_R1_TSR/src/tsr_uy.cpp
 dlib/svm_threaded.h
 -
 dlib/gui_widgets.h
@@ -8592,7 +8592,7 @@ dlib/cmd_line_parser.h
 dlib/opencv.h
 -
 opencv2/imgcodecs.hpp
-/home/justuny/Documents/CDS2018/CDS_R1_TSR/src/opencv2/imgcodecs.hpp
+/home/ltadl/CDS/CDS_R1_TSR/src/opencv2/imgcodecs.hpp
 opencv2/highgui/highgui.hpp
 -
 opencv2/imgproc/imgproc.hpp

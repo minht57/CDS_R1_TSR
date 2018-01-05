@@ -7036,7 +7036,7 @@ serialize.h
 platform.h
 ../dlib/dlib/../dlib/platform.h
 
-/home/justuny/Documents/CDS2018/CDS_R1_TSR/src/view_hog.cpp
+/home/ltadl/CDS/CDS_R1_TSR/src/view_hog.cpp
 dlib/gui_widgets.h
 -
 dlib/image_processing.h
