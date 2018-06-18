@@ -1,0 +1,108 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2729213707/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2729213707.dir/build.make CMakeFiles/cmTryCompileExec2729213707.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2729213707.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2729213707.dir/CheckSymbolExists.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2729213707
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2729213707.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2729213707.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2729213707 -rdynamic 
+CMakeFiles/cmTryCompileExec2729213707.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0xe): undefined reference to `pthread_create'
+CheckSymbolExists.c:(.text+0x12): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec2729213707] Error 1
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec2729213707/fast] Error 2
+
+File /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3051687125/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3051687125.dir/build.make CMakeFiles/cmTryCompileExec3051687125.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3051687125.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3051687125.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3051687125
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3051687125.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec3051687125.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3051687125 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3051687125] Error 1
+make: *** [cmTryCompileExec3051687125/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec234299422/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec234299422.dir/build.make CMakeFiles/cmTryCompileExec234299422.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec234299422.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec234299422.dir/CheckSymbolExists.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec234299422
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec234299422.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec234299422.dir/CheckSymbolExists.c.o  -o cmTryCompileExec234299422 -rdynamic 
+CMakeFiles/cmTryCompileExec234299422.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0xe): undefined reference to `pthread_create'
+CheckSymbolExists.c:(.text+0x12): undefined reference to `pthread_create'
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec234299422] Error 1
+make: *** [cmTryCompileExec234299422/fast] Error 2
+
+File /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4062951044/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4062951044.dir/build.make CMakeFiles/cmTryCompileExec4062951044.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4062951044.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec4062951044.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4062951044
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4062951044.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec4062951044.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4062951044 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec4062951044] Error 1
+make: *** [cmTryCompileExec4062951044/fast] Error 2
+
+

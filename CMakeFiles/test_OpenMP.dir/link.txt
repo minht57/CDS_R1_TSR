@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -fopenmp -O3 -DNDEBUG   CMakeFiles/test_OpenMP.dir/main_pid/test_OpenMP.cpp.o  -o bin/Release/test_OpenMP  -L/home/ubuntu/Downloads/2-Linux/OpenNI-Linux-Arm-2.3/Redist  -L/home/ubuntu/DriverlessCarChallenge_2017-2018/example/bin/Release -rdynamic 

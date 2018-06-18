@@ -1,0 +1,1070 @@
+The system is: Linux - 3.10.40-ga7da876 - armv7l
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/3.2.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/3.2.2/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4200378984/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4200378984.dir/build.make CMakeFiles/cmTryCompileExec4200378984.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4200378984.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4200378984.dir/testCCompiler.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec4200378984
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4200378984.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4200378984.dir/testCCompiler.c.o  -o cmTryCompileExec4200378984 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3273721710/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3273721710.dir/build.make CMakeFiles/cmTryCompileExec3273721710.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3273721710.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3273721710.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.2/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec3273721710
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3273721710.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTryCompileExec3273721710.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3273721710 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/4.8/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.3' --with-bugurl=file:///usr/share/doc/gcc-4.8/README.Bugs --enable-languages=c,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.8 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.8 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-libmudflap --disable-libitm --disable-libquadmath --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-4.8-armhf/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-4.8-armhf --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-4.8-armhf --with-arch-directory=arm --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --enable-multilib --disable-sjlj-exceptions --with-arch=armv7-a --with-fpu=vfpv3-d16 --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+gcc version 4.8.4 (Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.3) 
+COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/
+LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib/:/lib/arm-linux-gnueabihf/:/lib/../lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/../lib/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3273721710' '-rdynamic' '-march=armv7-a' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu'
+ /usr/lib/gcc/arm-linux-gnueabihf/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -z relro -o cmTryCompileExec3273721710 /usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/4.8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/4.8 -L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib -L/lib/arm-linux-gnueabihf -L/lib/../lib -L/usr/lib/arm-linux-gnueabihf -L/usr/lib/../lib -L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../.. CMakeFiles/cmTryCompileExec3273721710.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/arm-linux-gnueabihf/4.8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crtn.o
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTryCompileExec3273721710/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec3273721710.dir/build.make CMakeFiles/cmTryCompileExec3273721710.dir/build]
+  ignore line: [make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec3273721710.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3273721710.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.2/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec3273721710]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3273721710.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTryCompileExec3273721710.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3273721710 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/4.8/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.3' --with-bugurl=file:///usr/share/doc/gcc-4.8/README.Bugs --enable-languages=c,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.8 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.8 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-libmudflap --disable-libitm --disable-libquadmath --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-4.8-armhf/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-4.8-armhf --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-4.8-armhf --with-arch-directory=arm --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --enable-multilib --disable-sjlj-exceptions --with-arch=armv7-a --with-fpu=vfpv3-d16 --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.8.4 (Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.3) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib/:/lib/arm-linux-gnueabihf/:/lib/../lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/../lib/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3273721710' '-rdynamic' '-march=armv7-a' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu']
+  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -z relro -o cmTryCompileExec3273721710 /usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/4.8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/4.8 -L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib -L/lib/arm-linux-gnueabihf -L/lib/../lib -L/usr/lib/arm-linux-gnueabihf -L/usr/lib/../lib -L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../.. CMakeFiles/cmTryCompileExec3273721710.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/arm-linux-gnueabihf/4.8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crtn.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/4.8/collect2] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec3273721710] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crti.o] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/4.8/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/4.8] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib]
+    arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../..]
+    arg [CMakeFiles/cmTryCompileExec3273721710.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/4.8/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8] ==> [/usr/lib/gcc/arm-linux-gnueabihf/4.8]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/arm-linux-gnueabihf/4.8;/usr/lib/arm-linux-gnueabihf;/usr/lib;/lib/arm-linux-gnueabihf;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1251188228/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1251188228.dir/build.make CMakeFiles/cmTryCompileExec1251188228.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1251188228.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTryCompileExec1251188228.dir/feature_tests.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec1251188228
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1251188228.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1251188228.dir/feature_tests.c.o  -o cmTryCompileExec1251188228 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2290907090/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2290907090.dir/build.make CMakeFiles/cmTryCompileExec2290907090.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2290907090.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTryCompileExec2290907090.dir/feature_tests.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec2290907090
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2290907090.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2290907090.dir/feature_tests.c.o  -o cmTryCompileExec2290907090 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1904444418/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1904444418.dir/build.make CMakeFiles/cmTryCompileExec1904444418.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1904444418.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTryCompileExec1904444418.dir/feature_tests.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec1904444418
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1904444418.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1904444418.dir/feature_tests.c.o  -o cmTryCompileExec1904444418 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3691448897/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3691448897.dir/build.make CMakeFiles/cmTryCompileExec3691448897.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3691448897.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3691448897.dir/testCXXCompiler.cxx.o -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec3691448897
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3691448897.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec3691448897.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec3691448897 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1601835868/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1601835868.dir/build.make CMakeFiles/cmTryCompileExec1601835868.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1601835868.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1601835868.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.2/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec1601835868
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1601835868.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTryCompileExec1601835868.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1601835868 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/4.8/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.3' --with-bugurl=file:///usr/share/doc/gcc-4.8/README.Bugs --enable-languages=c,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.8 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.8 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-libmudflap --disable-libitm --disable-libquadmath --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-4.8-armhf/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-4.8-armhf --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-4.8-armhf --with-arch-directory=arm --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --enable-multilib --disable-sjlj-exceptions --with-arch=armv7-a --with-fpu=vfpv3-d16 --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+gcc version 4.8.4 (Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.3) 
+COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/
+LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib/:/lib/arm-linux-gnueabihf/:/lib/../lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/../lib/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1601835868' '-rdynamic' '-shared-libgcc' '-march=armv7-a' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu'
+ /usr/lib/gcc/arm-linux-gnueabihf/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -z relro -o cmTryCompileExec1601835868 /usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/4.8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/4.8 -L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib -L/lib/arm-linux-gnueabihf -L/lib/../lib -L/usr/lib/arm-linux-gnueabihf -L/usr/lib/../lib -L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../.. CMakeFiles/cmTryCompileExec1601835868.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/4.8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crtn.o
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTryCompileExec1601835868/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec1601835868.dir/build.make CMakeFiles/cmTryCompileExec1601835868.dir/build]
+  ignore line: [make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec1601835868.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1601835868.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.2/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec1601835868]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1601835868.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTryCompileExec1601835868.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1601835868 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/4.8/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.3' --with-bugurl=file:///usr/share/doc/gcc-4.8/README.Bugs --enable-languages=c,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.8 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.8 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-libmudflap --disable-libitm --disable-libquadmath --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-4.8-armhf/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-4.8-armhf --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-4.8-armhf --with-arch-directory=arm --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --enable-multilib --disable-sjlj-exceptions --with-arch=armv7-a --with-fpu=vfpv3-d16 --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.8.4 (Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.3) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/4.8/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib/:/lib/arm-linux-gnueabihf/:/lib/../lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/../lib/:/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1601835868' '-rdynamic' '-shared-libgcc' '-march=armv7-a' '-mfloat-abi=hard' '-mfpu=vfpv3-d16' '-mthumb' '-mtls-dialect=gnu']
+  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -z relro -o cmTryCompileExec1601835868 /usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/4.8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/4.8 -L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib -L/lib/arm-linux-gnueabihf -L/lib/../lib -L/usr/lib/arm-linux-gnueabihf -L/usr/lib/../lib -L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../.. CMakeFiles/cmTryCompileExec1601835868.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/4.8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crtn.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/4.8/collect2] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec1601835868] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crti.o] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/4.8/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/4.8] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib]
+    arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../..]
+    arg [CMakeFiles/cmTryCompileExec1601835868.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/4.8/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8] ==> [/usr/lib/gcc/arm-linux-gnueabihf/4.8]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/4.8/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/lib/gcc/arm-linux-gnueabihf/4.8;/usr/lib/arm-linux-gnueabihf;/usr/lib;/lib/arm-linux-gnueabihf;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++1y] compiler features compiled with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3713283008/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3713283008.dir/build.make CMakeFiles/cmTryCompileExec3713283008.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3713283008.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1y -o CMakeFiles/cmTryCompileExec3713283008.dir/feature_tests.cxx.o -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec3713283008
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3713283008.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec3713283008.dir/feature_tests.cxx.o  -o cmTryCompileExec3713283008 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2664370321/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2664370321.dir/build.make CMakeFiles/cmTryCompileExec2664370321.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2664370321.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTryCompileExec2664370321.dir/feature_tests.cxx.o -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec2664370321
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2664370321.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec2664370321.dir/feature_tests.cxx.o  -o cmTryCompileExec2664370321 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4235726166/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4235726166.dir/build.make CMakeFiles/cmTryCompileExec4235726166.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec4235726166.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTryCompileExec4235726166.dir/feature_tests.cxx.o -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec4235726166
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4235726166.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec4235726166.dir/feature_tests.cxx.o  -o cmTryCompileExec4235726166 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED succeded with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3241061987/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3241061987.dir/build.make CMakeFiles/cmTryCompileExec3241061987.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3241061987.dir/src.c.o
+/usr/bin/cc   -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTryCompileExec3241061987.dir/src.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec3241061987
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3241061987.dir/link.txt --verbose=1
+/usr/bin/cc   -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTryCompileExec3241061987.dir/src.c.o  -o cmTryCompileExec3241061987 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED succeded with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec964273692/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec964273692.dir/build.make CMakeFiles/cmTryCompileExec964273692.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec964273692.dir/src.cxx.o
+/usr/bin/c++    -std=c++11 -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTryCompileExec964273692.dir/src.cxx.o -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec964273692
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec964273692.dir/link.txt --verbose=1
+/usr/bin/c++    -std=c++11 -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTryCompileExec964273692.dir/src.cxx.o  -o cmTryCompileExec964273692 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3602282080/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3602282080.dir/build.make CMakeFiles/cmTryCompileExec3602282080.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3602282080.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3602282080.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec3602282080
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3602282080.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3602282080.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec3602282080 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec592603522/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec592603522.dir/build.make CMakeFiles/cmTryCompileExec592603522.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec592603522.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec592603522.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec592603522
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec592603522.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec592603522.dir/CheckFunctionExists.c.o  -o cmTryCompileExec592603522 -rdynamic -lpthread 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib/arm-linux-gnueabihf/libX11.so;/usr/lib/arm-linux-gnueabihf/libXext.so passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec376760107/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec376760107.dir/build.make CMakeFiles/cmTryCompileExec376760107.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec376760107.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec376760107.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec376760107
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec376760107.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec376760107.dir/CheckFunctionExists.c.o  -o cmTryCompileExec376760107 -rdynamic -lX11 -lXext 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec254898525/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec254898525.dir/build.make CMakeFiles/cmTryCompileExec254898525.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec254898525.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec254898525.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec254898525
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec254898525.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec254898525.dir/CheckFunctionExists.c.o  -o cmTryCompileExec254898525 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3574427133/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3574427133.dir/build.make CMakeFiles/cmTryCompileExec3574427133.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3574427133.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec3574427133.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3574427133
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3574427133.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec3574427133.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3574427133 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3210516171/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3210516171.dir/build.make CMakeFiles/cmTryCompileExec3210516171.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3210516171.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec3210516171.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3210516171
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3210516171.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec3210516171.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3210516171 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec615820881/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec615820881.dir/build.make CMakeFiles/cmTryCompileExec615820881.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec615820881.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec615820881.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec615820881
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec615820881.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec615820881.dir/CheckFunctionExists.c.o  -o cmTryCompileExec615820881 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1148351357/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1148351357.dir/build.make CMakeFiles/cmTryCompileExec1148351357.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1148351357.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec1148351357.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1148351357
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1148351357.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec1148351357.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1148351357 -rdynamic -lICE 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function png_create_read_struct exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1791919571/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1791919571.dir/build.make CMakeFiles/cmTryCompileExec1791919571.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1791919571.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=png_create_read_struct   -o CMakeFiles/cmTryCompileExec1791919571.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1791919571
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1791919571.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=png_create_read_struct    CMakeFiles/cmTryCompileExec1791919571.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1791919571 -rdynamic -lpng -lz 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function jpeg_read_header exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3417880768/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3417880768.dir/build.make CMakeFiles/cmTryCompileExec3417880768.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3417880768.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=jpeg_read_header   -o CMakeFiles/cmTryCompileExec3417880768.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3417880768
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3417880768.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=jpeg_read_header    CMakeFiles/cmTryCompileExec3417880768.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3417880768 -rdynamic -ljpeg 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2335708779/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2335708779.dir/build.make CMakeFiles/cmTryCompileExec2335708779.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2335708779.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2335708779.dir/CheckIncludeFile.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2335708779
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2335708779.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2335708779.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2335708779 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1450026962/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1450026962.dir/build.make CMakeFiles/cmTryCompileExec1450026962.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1450026962.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1450026962.dir/CheckIncludeFile.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1450026962
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1450026962.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1450026962.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1450026962 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec676474245/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec676474245.dir/build.make CMakeFiles/cmTryCompileExec676474245.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec676474245.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec676474245.dir/CheckIncludeFile.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec676474245
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec676474245.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec676474245.dir/CheckIncludeFile.c.o  -o cmTryCompileExec676474245 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining size of void* passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1123181954/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1123181954.dir/build.make CMakeFiles/cmTryCompileExec1123181954.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1123181954.dir/SIZE_OF_VOID_PTR.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1123181954.dir/SIZE_OF_VOID_PTR.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CheckTypeSize/SIZE_OF_VOID_PTR.c
+Linking C executable cmTryCompileExec1123181954
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1123181954.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1123181954.dir/SIZE_OF_VOID_PTR.c.o  -o cmTryCompileExec1123181954 -rdynamic -ljpeg 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2682581897/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2682581897.dir/build.make CMakeFiles/cmTryCompileExec2682581897.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2682581897.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2682581897.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2682581897
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2682581897.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2682581897.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2682581897 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2680632388/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2680632388.dir/build.make CMakeFiles/cmTryCompileExec2680632388.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2680632388.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2680632388.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2680632388
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2680632388.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2680632388.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2680632388 -rdynamic -lpthread 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib/arm-linux-gnueabihf/libX11.so;/usr/lib/arm-linux-gnueabihf/libXext.so passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4054871106/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4054871106.dir/build.make CMakeFiles/cmTryCompileExec4054871106.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4054871106.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec4054871106.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4054871106
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4054871106.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec4054871106.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4054871106 -rdynamic -lX11 -lXext 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2374908020/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2374908020.dir/build.make CMakeFiles/cmTryCompileExec2374908020.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2374908020.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec2374908020.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2374908020
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2374908020.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec2374908020.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2374908020 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec302268547/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec302268547.dir/build.make CMakeFiles/cmTryCompileExec302268547.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec302268547.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec302268547.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec302268547
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec302268547.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec302268547.dir/CheckFunctionExists.c.o  -o cmTryCompileExec302268547 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1860012892/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1860012892.dir/build.make CMakeFiles/cmTryCompileExec1860012892.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1860012892.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec1860012892.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1860012892
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1860012892.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec1860012892.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1860012892 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec146054784/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec146054784.dir/build.make CMakeFiles/cmTryCompileExec146054784.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec146054784.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec146054784.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec146054784
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec146054784.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec146054784.dir/CheckFunctionExists.c.o  -o cmTryCompileExec146054784 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1472047820/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1472047820.dir/build.make CMakeFiles/cmTryCompileExec1472047820.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1472047820.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec1472047820.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1472047820
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1472047820.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec1472047820.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1472047820 -rdynamic -lICE 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function png_create_read_struct exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3952810899/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3952810899.dir/build.make CMakeFiles/cmTryCompileExec3952810899.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3952810899.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=png_create_read_struct   -o CMakeFiles/cmTryCompileExec3952810899.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3952810899
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3952810899.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=png_create_read_struct    CMakeFiles/cmTryCompileExec3952810899.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3952810899 -rdynamic -lpng -lz 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function jpeg_read_header exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec833933923/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec833933923.dir/build.make CMakeFiles/cmTryCompileExec833933923.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec833933923.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=jpeg_read_header   -o CMakeFiles/cmTryCompileExec833933923.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec833933923
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec833933923.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=jpeg_read_header    CMakeFiles/cmTryCompileExec833933923.dir/CheckFunctionExists.c.o  -o cmTryCompileExec833933923 -rdynamic -ljpeg 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec762247292/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec762247292.dir/build.make CMakeFiles/cmTryCompileExec762247292.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec762247292.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec762247292.dir/CheckIncludeFile.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec762247292
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec762247292.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec762247292.dir/CheckIncludeFile.c.o  -o cmTryCompileExec762247292 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2747632649/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2747632649.dir/build.make CMakeFiles/cmTryCompileExec2747632649.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2747632649.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2747632649.dir/CheckIncludeFile.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2747632649
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2747632649.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2747632649.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2747632649 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1945668543/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1945668543.dir/build.make CMakeFiles/cmTryCompileExec1945668543.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1945668543.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1945668543.dir/CheckIncludeFile.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1945668543
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1945668543.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1945668543.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1945668543 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Determining size of void* passed with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4290947950/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4290947950.dir/build.make CMakeFiles/cmTryCompileExec4290947950.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4290947950.dir/SIZE_OF_VOID_PTR.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4290947950.dir/SIZE_OF_VOID_PTR.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CheckTypeSize/SIZE_OF_VOID_PTR.c
+Linking C executable cmTryCompileExec4290947950
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4290947950.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4290947950.dir/SIZE_OF_VOID_PTR.c.o  -o cmTryCompileExec4290947950 -rdynamic -ljpeg 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED succeded with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2069760501/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2069760501.dir/build.make CMakeFiles/cmTryCompileExec2069760501.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2069760501.dir/src.c.o
+/usr/bin/cc   -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTryCompileExec2069760501.dir/src.c.o   -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec2069760501
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2069760501.dir/link.txt --verbose=1
+/usr/bin/cc   -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTryCompileExec2069760501.dir/src.c.o  -o cmTryCompileExec2069760501 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED succeded with the following output:
+Change Dir: /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2993834890/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2993834890.dir/build.make CMakeFiles/cmTryCompileExec2993834890.dir/build
+make[1]: Entering directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2993834890.dir/src.cxx.o
+/usr/bin/c++    -std=c++11 -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTryCompileExec2993834890.dir/src.cxx.o -c /home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec2993834890
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2993834890.dir/link.txt --verbose=1
+/usr/bin/c++    -std=c++11 -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTryCompileExec2993834890.dir/src.cxx.o  -o cmTryCompileExec2993834890 -rdynamic 
+make[1]: Leaving directory `/home/ubuntu/DriverlessCarChallenge_2017-2018/example/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
